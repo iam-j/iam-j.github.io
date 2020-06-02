@@ -32,13 +32,17 @@ email: ydderhtnawsaj@gmail.com
 description: "Capturing and sharing things found across web."
 github:
   username: iam-j
+swiftype:
+  searchId: 
+gitment:
+    repo: 
+    client_id: 
+    client_secret: 
+
+#url: "https://bit-ranger.github.io/blog"
+#imgrepo: "https://bit-ranger.github.io/blog/static/img"
 
 
-
-url: ""
-imgrepo: ""
-
-
-#url: "http://127.0.0.1:4000"
-#imgrepo: "http://127.0.0.1:4000/static/img"
+url: "http://127.0.0.1:4000"
+imgrepo: "http://127.0.0.1:4000/static/img"
 
