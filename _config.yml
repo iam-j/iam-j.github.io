@@ -29,15 +29,10 @@ defaults:
 
 title: "Excursions"
 email: ydderhtnawsaj@gmail.com
-description: "Capturing and sharing things found across web."
+description: ""
 github:
   username: iam-j
-swiftype:
-  searchId: 
-#gitment:
-#    repo: 
-#    client_id: 
-#    client_secret: 
+
 
 url: "https://iam-j.github.io"
 imgrepo: "https://iam-j.github.io/static/img"
