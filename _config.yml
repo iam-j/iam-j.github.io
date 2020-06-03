@@ -22,8 +22,8 @@ defaults:
       type: posts
     values:
       layout: post
-      styles : [highlight.css,gitment.css,post.css]
-      scripts : [gitment.js, post.js]
+      styles : [highlight.css,post.css]
+      scripts : [ post.js]
 
 
 
@@ -34,10 +34,10 @@ github:
   username: iam-j
 swiftype:
   searchId: 
-gitment:
-    repo: 
-    client_id: 
-    client_secret: 
+#gitment:
+#    repo: 
+#    client_id: 
+#    client_secret: 
 
 #url: "https://bit-ranger.github.io/blog"
 #imgrepo: "https://bit-ranger.github.io/blog/static/img"

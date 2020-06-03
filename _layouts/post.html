@@ -22,14 +22,15 @@ layout: default
             {{content}}
           </article>
           <hr class="boundary">
-          <div id="post-share" class="bdsharebuttonbox">
+          {% include share-buttons.html %}
+          <!-- <div id="post-share" class="bdsharebuttonbox">
               <a href="#" class="bds_more" data-cmd="more"></a>
               <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
               <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
               <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
               <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
               <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
-          </div>
+          </div> -->
         </div>
         <div class="pad-min"></div>
         <!-- <div id="post-comment" class="sheet post hidden">
@@ -40,7 +41,7 @@ layout: default
       <div class="shadow-bottom-center" >
         <div class="content-navigation-toc">
             <div class="content-navigation-header">
-                <span class="octicon octicon-list-unordered"></span>&nbsp;Toc
+                <span class="octicon octicon-list-unordered"></span>&nbsp;Topic
             </div>
             <div class="content-navigation-list toc"></div>
         </div>
