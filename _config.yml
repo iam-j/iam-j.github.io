@@ -39,7 +39,7 @@ swiftype:
 #    client_id: 
 #    client_secret: 
 
-url: "https://iam-j.github.io/"
+url: "https://iam-j.github.io"
 imgrepo: "https://iam-j.github.io/static/img"
 
 
