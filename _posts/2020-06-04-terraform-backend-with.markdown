@@ -9,7 +9,7 @@ categories: Java
 * TOC 
 {:toc}
 
-This is simple and most often googled thing on web,creating a backend for Terraform for deployemnts in AWS cloud with a provision of locking the state.
+This is simple and most often googled thing on web,creating a backend for Terraform for deployments in AWS cloud with a provision for locking the state file.
 
 
 # Create DynamoDB
