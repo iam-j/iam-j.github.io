@@ -69,7 +69,7 @@ resource "aws_instance" "Primary-EC2" {
 
 resource "aws_instance" "Secondary-EC2" {
     provider = aws.backup
-    ami = var.ami
+    ami = var.ami_backup
     instance_type = "t2.micro"
     tags = {
         Name = "Secondary-EC2"
