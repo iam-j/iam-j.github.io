@@ -3,7 +3,7 @@ layout: post
 title: Terraform backend with Dynamo DB
 date: 2020-06-04 11:31:59
 tags: terraform aws
-categories: Java
+categories: Iac
 ---
 
 * TOC 
