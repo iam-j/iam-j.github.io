@@ -6,10 +6,10 @@ tags: terraform aws
 categories: Iac
 ---
 
+This is simple and most often googled thing on web,creating a backend for Terraform for deployments in AWS cloud with a provision for locking the state file.
+
 * TOC 
 {:toc}
-
-This is simple and most often googled thing on web,creating a backend for Terraform for deployments in AWS cloud with a provision for locking the state file.
 
 
 # Create DynamoDB
