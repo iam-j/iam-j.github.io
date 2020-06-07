@@ -21,7 +21,7 @@ In a production system this failure has to be alerted and we have a way to achie
 
 Lets see how to use it
 
-# Capture ECS event
+### Capture ECS event
 
 Before starting with alert we need to capture a sample event of the ECS failure.
 
@@ -51,7 +51,7 @@ In our case its **task not started** event/message which would be as below
 
 This Json sample can then be used to setup cloudwatch alert to trigger a lambda or SNS notification.
 
-# Setting up alert
+### Setting up alert
 
 With JSON in place to capture the events we can direclty jump to cloudwatch rule and setup a new one to alert us.
 
@@ -59,7 +59,7 @@ The way to setup simple is easy as shown below if you already have a lambda or S
 
 ![event][event]
 
-# Other ECS events
+### Other ECS events
 
 Example shown here is just one of the many cases you come across while working with ECS,for additional events and customization please go through the official documentation [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_cwe_events.html)
 

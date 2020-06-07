@@ -19,7 +19,7 @@ Assuming you are already aware of using ECS tasks and clusters,lets dive into it
 {:toc}
 
 
-# Create Task definiton
+### Create Task definiton
 
 With container already ready and pushed to the *ECR* we can create simple task definition to run our container in ECS cluster.
 
@@ -29,13 +29,13 @@ Mention the memory ,cpu requirements and entrypoint and we are good to go.
 ![job0][job0]
 
 
-# ECS cluster
+### ECS cluster
 
 Have atleast one ECS cluster ready to run our task.If not available create a Fargate or EC2 cluster with default options.
 
 We can skip scaling and load balancer options as we already aware of the capacity and the schedule for the task or job to run.
 
-# Scheduling the task
+### Scheduling the task
 
 We reached to a point where we are actually going to schedule the task in ECS. On the cluster we have created,you should be seeing a tab called **Scheduled Tasks**
 
@@ -53,7 +53,7 @@ As mentioned earlier,above steps automatically creates the required rule and tar
 
 ![job4][job4]
 
-# Note
+### Note
 
 I have assumed a lot of prerequisites existing in your AWS account to make the process simple,let me capture them here.
 

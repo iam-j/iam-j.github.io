@@ -14,7 +14,7 @@ We might come across a scenario where we need to deploy resources in multiple AW
 Using Terraform for infrastructure as code we can achieve this using **alias** in Provider.
 
 
-# Primary region
+### Primary region
 
 Declare the provider with primary region as usual.
 
@@ -28,7 +28,7 @@ provider "aws" {
 
 {% endhighlight %}
 
-# Backup region
+### Backup region
 
 Declare the second provider with alias which can be used while creating resources.
 
@@ -41,7 +41,7 @@ provider "aws" {
 
 {% endhighlight %}
 
-# Full terraform sample
+### Full terraform sample
 
 Now we can proceed using the alias to create resources in primary and backup regions in our case its us-east-1 and ap-southeast-1
 

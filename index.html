@@ -21,7 +21,6 @@ layout: default
                   </a>
                   {% if post.image %}<img src={{ post.image | prepend: site.imgrepo }} alt="">{% endif %}
                   <p>{{ post.content }}</p>
-                  <a class="readmore" href="{{ post.link }}">External Link</a>
 
                   {% else %}
                   <a class="title" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">

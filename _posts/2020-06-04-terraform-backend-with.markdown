@@ -12,7 +12,7 @@ This is simple and most often googled thing on web,creating a backend for Terraf
 {:toc}
 
 
-# Create DynamoDB
+### Create DynamoDB
 
 Use the terraform script to create DynamoDB to lock the state of the file terraform.tfstate
 
@@ -40,7 +40,7 @@ resource "aws_dynamodb_table" "dynamodb-terraform-lock" {
 
 {% endhighlight %}
 
-# Create Terraform backend
+### Create Terraform backend
 
 Below code sample creates the backend assuming you existing S3 bucket and DyanamoDb.
 
