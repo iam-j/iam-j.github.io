@@ -3,7 +3,7 @@ layout: post
 title: Terraform backend with Dynamo DB
 date: 2020-06-04 11:31:59
 tags: terraform aws
-categories: Iac
+categories: iac
 ---
 
 This is simple and most often googled thing on web,creating a backend for Terraform for deployments in AWS cloud with a provision for locking the state file.

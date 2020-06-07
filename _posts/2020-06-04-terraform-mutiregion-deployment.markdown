@@ -3,7 +3,7 @@ layout: post
 title: Terraform multiregion deployment
 date: 2020-06-04 12:31:59
 tags: terraform aws
-categories: Iac
+categories: iac
 ---
 
 We might come across a scenario where we need to deploy resources in multiple AWS regions as a disastor recovery or backup plan.
