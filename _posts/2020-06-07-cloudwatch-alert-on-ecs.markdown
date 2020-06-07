@@ -1,9 +1,10 @@
 ---
 layout: post
 title: Cloudwatch alert on ECS event
-date: 2020-06-07
+date: 2020-06-07 04:31:59
 tags: aws ecs cloudwatch
 categories: monitoring
+image: /event.jpg
 ---
 
 Consider a use case where a ECS task could not be placed or started on a cluster and fails silently.
