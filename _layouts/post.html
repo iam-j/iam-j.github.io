@@ -5,7 +5,12 @@ layout: default
     <div class="content col-lg-9">
         <div class="sheet post">
           <header>
+            {% if page.link %}
+                  <h2><a href="{{ page.link }}">{{ page.title }}</a></h2>
+            {% else %}          
             <h2>{{ page.title }}</h2>
+            {% endif %}
+
             <p class="post-meta">
                 <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
             </p>
