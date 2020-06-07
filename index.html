@@ -18,7 +18,7 @@ layout: default
                       {{ post.title }}
                       {% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
                   </a>
-                  
+                  {% if post.image %}<img src={{ post.image | prepend: site.imgrepo }} alt="">{% endif %}
                   <p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
                   <a class="readmore" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.url }}{% endif %}
                   ">{% if post.link %}External Link{% else %}Read More{% endif %}</a>
