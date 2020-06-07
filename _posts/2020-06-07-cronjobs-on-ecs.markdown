@@ -7,7 +7,9 @@ categories: jobs
 image: /schedule/job3.jpg
 ---
 
-We have a scenario where we just need to run a task on scheduled time of a day or repeat every few hours inside AWS.Our first instinct would be to have the task in *Lambda* and schedule it in Cloudwatch or if the binaries have dependencies and need to be run inside container,the choice would be *AWS Batch*
+We have a scenario where we just need to run a task on scheduled time of a day or repeat every few hours inside AWS.
+
+Our first instinct would be to have the task in *Lambda* and schedule it in Cloudwatch or if the binaries have dependencies and need to be run inside container,the choice would be *AWS Batch*
 
 But there is lesser known and easier option, to run the task in ECS cluster on schedule.
 
