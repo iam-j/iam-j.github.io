@@ -3,7 +3,7 @@ layout: post
 title: ECS autoscaling resources
 date: 2020-06-08 05:31:59
 tags: aws ecs scaling
-categories: troubleshooting
+categories: resources
 ---
 
 Autoscaling resources on ECS is simple but optimizing it for the cost and capacity becomes a difficult task once the scale of workload increases.
