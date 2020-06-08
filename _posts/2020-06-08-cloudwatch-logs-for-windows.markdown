@@ -13,9 +13,8 @@ Even basic options like logging needs an additonal configuration to be made.In a
 
 So lets see how the ECS Cloudwatch logs can be enabled for Windows containers
 
-* TOC 
+* TOC
 {:toc}
-
 
 ### Enabling Logs from UI
 
@@ -34,14 +33,13 @@ With the option set if you try to launch the task on the Windows EC2 cluster you
 
 The actual reason behind the error which AWS does not explain to us, is the missing configuration on the Host EC2 which we will doing in the next step.
 
-
 ### Enable Support on EC2
 
 The Host runnning the container should have the environmental variables defined for the *ECS agent* to start sending logs to Cloudwatch.
 
 {% highlight powershell %}
 
-[Environment]::SetEnvironmentVariable("ECS_ENABLE_AWSLOGS_EXECUTIONROLE_OVERRIDE",$TRUE, "Machine")
+    [Environment]::SetEnvironmentVariable("ECS_ENABLE_AWSLOGS_EXECUTIONROLE_OVERRIDE",$TRUE, "Machine")
 
 {% endhighlight %}
 
@@ -55,18 +53,13 @@ The option mentioned above should be added in the **Userdata** of the **Launch C
 
 ![log3][log3]
 
-
-Once the setup is complete you should be able to see all the containers logs running in the cluster inside Cloudwatch 
+Once the setup is complete you should be able to see all the containers logs running in the cluster inside Cloudwatch.
 
 ![log4][log4]
 
-
-
 [source](https://github.com/aws/amazon-ecs-agent/issues/1395)
-
 
 [log1]: {{"/logging/log1.jpg" | prepend: site.imgrepo }}
 [log2]: {{"/logging/log2.jpg" | prepend: site.imgrepo }}
 [log3]: {{"/logging/log3.jpg" | prepend: site.imgrepo }}
 [log4]: {{"/logging/log4.jpg" | prepend: site.imgrepo }}
-
