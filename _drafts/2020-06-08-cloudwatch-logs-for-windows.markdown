@@ -11,7 +11,8 @@ If you already have or planning to use Windows workloads on Amazon ECS, you shou
 
 Even basic options like logging needs an additonal configuration to be made.In addtion to this, the errors thrown at us are not very informative.
 
-So lets see how the ECS Cloudwatch logs can be enabled for Windows containers
+So lets see how the ECS Cloudwatch logs can be enabled for Windows containersI
+
 
 * TOC
 {:toc}
