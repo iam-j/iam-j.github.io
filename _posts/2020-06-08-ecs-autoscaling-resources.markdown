@@ -11,17 +11,17 @@ Autoscaling resources on ECS is simple but optimizing it for the cost and capaci
 Below are few interesting resources which are helpful and good to know
 
 
-### [Set it and Forget it Auto Scaling Target Tracking Policies](https://www.youtube.com/watch?v=srofVz6xvkE)
+### [Set it and Forget it Auto Scaling Target Tracking Policies &rarr;](https://www.youtube.com/watch?v=srofVz6xvkE)
 
 Nice video explaining Target tracking policy,how to estimate and plan for the target to be tracked.
 
 
-### [Deep Dive on Amazon ECS Cluster Auto Scaling](https://aws.amazon.com/blogs/containers/deep-dive-on-amazon-ecs-cluster-auto-scaling/)
+### [Deep Dive on Amazon ECS Cluster Auto Scaling &rarr;](https://aws.amazon.com/blogs/containers/deep-dive-on-amazon-ecs-cluster-auto-scaling/)
 
 Article on official Amazon blog explaining the details of ECS autoscaling.
 
 
-### [When AWS Autoscale Doesn’t](https://segment.com/blog/when-aws-autoscale-doesn-t/)
+### [When AWS Autoscale Doesn’t &rarr;](https://segment.com/blog/when-aws-autoscale-doesn-t/)
 
 This article shows us the inticracies of scale up and scale down and prepares us for the surprises hidden beneath.
 
