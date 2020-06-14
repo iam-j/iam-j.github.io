@@ -1,5 +1,5 @@
 ---
-title: Building a Kubernetes-based Platform: Container Tooling, Progressive Delivery, the Edge, and Observability - DZone DevOps
+title: Building a Kubernetes-based Platform Container Tooling, Progressive Delivery, the Edge, and Observability
 category: infrastructure 
 tags: Kubernetes ci 
 layout: post

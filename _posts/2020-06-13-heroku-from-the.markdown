@@ -1,5 +1,5 @@
 ---
-title: Heroku From the Perspective of a Cloud Architect - DZone Cloud
+title: Heroku From the Perspective of a Cloud Architect
 category: architecture
 tags: heroku kubernetes
 layout: post
