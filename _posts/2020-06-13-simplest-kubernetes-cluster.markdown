@@ -139,7 +139,7 @@ We can check the Pods and Nodes using the commands below.
 {% highlight bash %}
 kubectl get pods
 
-Kubectl get nodes
+kubectl get nodes
 {% endhighlight %}
 
 ### First deployment
