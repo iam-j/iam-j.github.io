@@ -53,6 +53,8 @@ article .module blockquote {
 
 article .module p {
     margin-top: 20px;
+    line-height: 1.7;
+
 }
 
 article .title{

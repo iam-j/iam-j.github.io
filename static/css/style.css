@@ -109,7 +109,7 @@ body {
     margin: 0px 0px 0px 0px;
 }
 
-body,code,pre{
+body,pre{
     font-family:  'Helvetica Neue', -apple-system, system-ui, Verdana, sans-serif;
 }
 
@@ -131,6 +131,7 @@ a:active {text-decoration: none}	/* 选定的链接 */
 .content{
     padding-right: 0px;
     padding-left: 0px;
+    line-height: 1.7;
 }
 
 .sheet{
