@@ -40,6 +40,10 @@ layout: null
     color: #fff;
 }
 
+.navbar-brand{
+    font-size: 24px;
+    font-weight: bold;
+}
 
 .navbar-tiffany .nav>li>a:hover,
 .navbar-tiffany .nav>li>a:focus,
