@@ -1,7 +1,7 @@
 ---
 title: Building a Kubernetes-based Platform Container Tooling, Progressive Delivery, the Edge, and Observability
 category: infrastructure 
-tags: Kubernetes ci 
+tags: kubernetes ci 
 layout: post
 date: 2020-06-14 03:13:21
 link: https://dzone.com/articles/building-a-kubernetes-based-platform-focus-on-prog
