@@ -266,3 +266,8 @@ a:active {text-decoration: none}	/* 选定的链接 */
         font-size: 36px;
     }
 }
+
+.gsc-selected-option-container{
+    max-width : 100% !important;
+}
+
