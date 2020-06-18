@@ -1,0 +1,11 @@
+---
+title:No Code
+category: software
+tags: tools
+layout: post
+date: 2020-06-18 17:37:40
+link: https://vas3k.com/blog/nocode/
+---
+>That’s why at the end of the article I can only repeat the trivial: always try to understand what's going on, always look for practical benefits, rather than catchy words, and always try stay in the middle.
+
+Long and interesting post on Nocode vs Coding for building workflows.Also it has many tools which can used instead of coding one yourself.
