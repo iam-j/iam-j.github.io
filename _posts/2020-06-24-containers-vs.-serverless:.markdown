@@ -1,5 +1,5 @@
 ---
-title: Containers vs. Serverless: Thoughts About Your Cloud Strategy | cloudonaut
+title: Containers vs. Serverless - Thoughts About Your Cloud Strategy
 category: serverless
 tags: containers
 layout: post
