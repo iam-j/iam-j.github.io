@@ -96,7 +96,7 @@ We can achieve smooth scale in and scale out of the resources in the cluster and
 
 This [post](https://aws.amazon.com/blogs/containers/deep-dive-on-amazon-ecs-cluster-auto-scaling/) from AWS goes in to the hidden details of Capacity Providers and has much more information, if interested.
 
-#Update:#
+*Update:*
 
 If your tasks are not going to provisioning state while using Capacity Provider,make sure you are using capacity provider strategy instead of launch_type in your service as mentioned [here](https://github.com/aws/containers-roadmap/issues/653#issuecomment-568284219)
 
