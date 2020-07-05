@@ -4,20 +4,18 @@ title: Archive
 permalink: /archive/
 icon: octicon-repo
 isNavItem: true
-styles: archive.css
 ---
 
-<section id="cd-timeline" class="cd-container">
-{% for post in site.posts  %}
-    <div class="cd-timeline-block" id="{{ post.date | date: '%Y-%m-%d' }}">
-        <div class="cd-timeline-img cd-picture">
-            <img src="{{ '/icon-picture.svg' | prepend: site.imgrepo }}" alt="Picture">
-        </div>
 
-        <div class="cd-timeline-content">
+{% for post in site.posts %}
+    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+        {% if month != nmonth %}
+            {% if forloop.index != 1 %}<hr>{% endif %}
+            
+            {% endif %}
             <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"><h4>{{ post.title }}</h4></a>
-            <span class="cd-date">{{ post.date | date: '%Y-%m-%d' }}</span>
-        </div>
-    </div>
+            <a>{{ post.date | date: "%e %B, %Y" }}</a>
+          
 {% endfor %}
-</section>
+
