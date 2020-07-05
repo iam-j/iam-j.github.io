@@ -22,16 +22,12 @@
                         {% if p.url == page.url %}
                         <li class="active">{% else %}
                         <li>{% endif %}
-                            <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}" class="word-keep"><span class="octicon {{ p.icon }}"></span>&nbsp;&nbsp;{{ p.title }}</a>
-                          
+                        <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}" class="word-keep"><span class="octicon {{ p.icon }}"></span>&nbsp;&nbsp;{{ p.title }}</a>
                         </li>
-                        
                         {% endif %}
                         {% endfor %}
                         <!-- <li><a href="#stq=" class="search-button"><span class="octicon octicon-search"></span></a></li> -->
-                        <li><a href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode">
-                            Dark mode(Beta)
-                          </a></li>
+                        <li><a href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode">&nbsp;&nbsp;Dark mode(Beta)</a></li>
                     </ul>
                 </div>
             </div>
