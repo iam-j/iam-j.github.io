@@ -14,14 +14,14 @@
     
 
     h1:not([style*="color:"]):not(.title),
-    h2:not([style*="color:"]):not(.title)
+    h2:not([style*="color:"]):not(.title),
+    h4:not([style*="color:"]):not(.title),
      {
         color: #428bca!important;
     }
 
     
     h3:not([style*="color:"]):not(.title),
-    h4:not([style*="color:"]):not(.title),
     h5:not([style*="color:"]):not(.title),
     h6:not([style*="color:"]):not(.title)
     {

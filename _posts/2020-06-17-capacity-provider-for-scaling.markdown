@@ -14,11 +14,11 @@ With Capacity Provider the ECS cluster management takes new turn,lets see how..
 * TOC 
 {:toc}
 
-## What are Capacity Providers
+### What are Capacity Providers
 
 At the higher level it is a tool to provide compute resources for our cluster,with out us managing or configuring scaling manually.[Released](https://aws.amazon.com/about-aws/whats-new/2019/12/amazon-ecs-capacity-providers-now-available/) 6 months back,it allows us to mix and match EC2 On demand,Spot or Fargate and Fargate Spot.
 
-## Configuring Capacity Provider
+### Configuring Capacity Provider
 
 Configuring Capacity Provider has been made simple to create,only prerequisite is to have an existing
 
@@ -39,7 +39,7 @@ Fill the details of the provider, ASG and make sure to enable *Managed scaling* 
 
 *Target Capacity %* helps us to define the amount of utilization of our capacity which in turn is used to define Cloudwatch Alarms.
 
-## How does it scale
+### How does it scale
 
 Once a capacity provider is created we have Cloudwatch alarms automatically created.In this case setting a *Target Capacity %* of 90 percent, we see below alarms.
 
@@ -52,7 +52,7 @@ So the Provider makes sure to increase or decrease the number of EC2 machines in
 
 Only one thing we need to make sure, the ASG should have the minimum and maximum values sufficiently set to handle our ECS workload.
 
-## Creation from Terraform
+### Creation from Terraform
 
 With the bugs[1](https://github.com/aws/containers-roadmap/issues/632#event-3450950532) and [2](https://github.com/terraform-providers/terraform-provider-aws/issues/11286#issuecomment-645063796) in creating and destroying the Capacity provider from CLI/API fixed , we can start using them in our Terraform scripts while creating a cluster as below
 
@@ -88,7 +88,7 @@ resource "aws_ecs_capacity_provider" "my_ec2_provider" {
 
 Note:We can attach multiple Providers to a single cluster.
 
-## Conclusion.
+### Conclusion.
 
 We can achieve smooth scale in and scale out of the resources in the cluster and more importantly we now have a new state for ECS called **PROVISIONING** which makes sure to keep the task in waiting state until we have the sufficient capacity scaled out, instead of failing with **Insufficient resources** , which was the case previously.
 

@@ -18,7 +18,7 @@ Assuming you already have
 
 Lets begin..
 
-## Installing the Dashboard
+### Installing the Dashboard
 
 Visit this [page](https://github.com/kubernetes/dashboard/releases) to see the latest available version of the Dashboard.
 
@@ -42,7 +42,7 @@ As you might you have noticed ,this URL will only work from the cluster.we need 
 kubectl proxy --address EC2Ipaddr --accept-hosts '^.*$' --port=8001
 {% endhighlight %}
 
-## User Login for testing
+### User Login for testing
 
 **Please note** that the instructions below would give full access to the cluster with out any authentication so use it only for testing and never on Production.
 
@@ -84,7 +84,7 @@ Rerun the proxy command in previous command,you should be able to login and see 
 kubectl proxy --address EC2Ipaddr --accept-hosts '^.*$' --port=8001
 {% endhighlight %}
 
-## Conclusion
+### Conclusion
 
 With this setup we should be able see the details of the Nodes,Pods,Clusters,deployments and etc.As your cluster complexity increases Kubernetes Dashboard would be very useful to track the resources.
 

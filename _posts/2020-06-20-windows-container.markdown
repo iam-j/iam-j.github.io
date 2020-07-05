@@ -17,7 +17,7 @@ Yes,you can run windows containers and Microsoft provides official base [images]
 * TOC 
 {:toc}
 
-## Why Windows Containers
+### Why Windows Containers
 
 Running Windows application in container gives us 
 
@@ -28,7 +28,7 @@ Running Windows application in container gives us
 
 Of course you might have heard these benefits for Linux applications but the same can be achieved with Windows too.
 
-## Types of Windows base images
+### Types of Windows base images
 
 Microsoft gives us  four major image types based on application dependency and compatibility.
 
@@ -37,7 +37,7 @@ Microsoft gives us  four major image types based on application dependency and c
 - [Windows](https://hub.docker.com/_/microsoft-windows) : Full Windows API
 - [Windows IOT Core](https://hub.docker.com/_/microsoft-windows-iotcore) : For IOT applications
 
-## Where Should I run them
+### Where Should I run them
 
 Traditional way of hosting EC2 machines with Docker installed always work.But let us explore different ways of running them on **AWS Cloud**.
 
@@ -76,7 +76,7 @@ The documentation [here](https://docs.aws.amazon.com/AmazonECS/latest/developerg
 
 
 
-## Finally
+### Finally
 
 I can understand and appreciate your efforts and the needy situation which makes you to go through the constraints.
 But once you have them running ,all the benefits mentioned above Portability,Scalability,Distribution and Consistency are as good as *Linux containers*.

@@ -63,7 +63,7 @@ import re
 def get_url():
     contents = requests.get('https://api.unsplash.com/photos/random/?client_id=YOUR_CLIENT_ID_HERE').json()    
     url = contents['urls']
-## Fetching regular size image from the returned JSON file    
+##Fetching regular size image from the returned JSON file    
     image = url["regular"]
     return image
 
