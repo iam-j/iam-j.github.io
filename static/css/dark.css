@@ -171,3 +171,10 @@
     border-bottom-color: rgb(62, 68, 70) !important;
     background-color: rgb(62, 68, 70) !important;
 }
+
+input.gsc-input {
+    border-top-color: rgb(58, 62, 65) !important;
+    border-right-color: rgb(58, 62, 65) !important;
+    border-bottom-color: rgb(58, 62, 65) !important;
+    border-left-color: rgb(58, 62, 65) !important;
+}
