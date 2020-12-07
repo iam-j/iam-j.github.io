@@ -4,7 +4,7 @@ title: Browse and download S3 files with out public access to Bucket
 date: 2020-12-07
 tags: aws ec2 s3
 categories: s3
-image: /s3note/s3note1.jpg
+image: /s3note/s3note2.jpg
 ---
 
 **Scenario:** Users have to access and download files from a S3 bucket but not upload or change the contents of the same.
