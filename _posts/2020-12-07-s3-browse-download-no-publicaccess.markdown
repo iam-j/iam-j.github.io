@@ -47,7 +47,8 @@ Next create EC2 instance role with read only access policy for the S3 as below.
                 "s3:Get*",
                 "s3:List*"
             ],
-            "Resource": "*"
+            "Resource": ["arn:aws:s3:::my_bucket",
+                 "arn:aws:s3:::my_bucket/*"]
         }
     ]
 }
