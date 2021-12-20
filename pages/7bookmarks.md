@@ -34,6 +34,8 @@ isNavItem: true
 
 [A Practical Introduction to Container Terminology - Red Hat Developer](https://developers.redhat.com/blog/2018/02/22/container-terminology-practical-introduction/)
 
+[Devops Exercises](https://github.com/bregman-arie/devops-exercises)
+
 ### Web
 
 [What is React: A Visual Introduction For Beginners](https://learnreact.design/posts/what-is-react)
