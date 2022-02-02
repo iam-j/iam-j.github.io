@@ -38,7 +38,7 @@ You have an working Ansible environment with a proper inventory file with all th
 
       - name: Setting fact for number of days
         set_fact:
-          uptime_days: "{{ (UPTIME_PRE_REBOOT.stdout | int / 86400) | round(0) }}"
+          uptime_days: "{ { (UPTIME_PRE_REBOOT.stdout | int / 86400) | round(0) } }"
 
       - name: Hosts to be rebooted.
         debug:
