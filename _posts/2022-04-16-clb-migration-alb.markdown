@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Classic Load Balancer migration to ALB
-date: 2022-04-18
+date: 2022-04-16
 tags: aws iac
 categories: aws
 image: /clb1.jpg
