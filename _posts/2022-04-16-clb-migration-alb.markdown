@@ -7,7 +7,9 @@ categories: aws
 image: /clb/clb1.jpg
 ---
 
-AWS Classic Load Balancers have already been retired and the official [deadline](https://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/#:~:text=On%20October%2030%2C%202021%20we,Reserved%20Instances%20for%20EC2%2DClassic.) for migration is coming up.
+AWS EC2 Classic have already been retired and the official [deadline](https://aws.amazon.com/blogs/aws/ec2-classic-is-retiring-heres-how-to-prepare/#:~:text=On%20October%2030%2C%202021%20we,Reserved%20Instances%20for%20EC2%2DClassic.) for migration is coming up.
+
+Although its not mentioned directly,the official recommendation is to use to the new Application/Network Load Balancers over the Classic Load Bakancers in VPC.
 
 We have a quick migration option available in the AWS management console but is not useful for Projects and Infra which are deployed/maintained using the Infrastructure as Code.
 
