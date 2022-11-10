@@ -4,7 +4,7 @@ title: Track CloudFormation Stack Changes Using EventBridge
 date: 2022-11-09
 tags: iac cloudformation
 categories: iac
-image: /eventbridge1.jpg
+image: /eventbridge/eventbridge1.jpg
 ---
 
 If you are handling your infrastructure as code using CloudFormation stacks and is managed by multiple users, you could have run into a scenario where one of them might have run the stack or modified the stack and no one is aware of change. To track and get alert on those scenarios we now have support for CloudFormation [events](https://aws.amazon.com/about-aws/whats-new/2022/07/aws-cloudformation-event-notifications-amazon-eventbridge-event-driven-applications/) in the EventBridge which can be piped to SNS or custom alert system.
@@ -24,6 +24,8 @@ Below JSON will help us in creating an alert for different statuses like
 - Update Complete/Failed
 - Delete Failure
 
+{% highlight json %}
+
 {
   "source": ["aws.cloudformation"],
   "detail-type": ["CloudFormation Resource Status Change"],
@@ -36,6 +38,7 @@ Below JSON will help us in creating an alert for different statuses like
   }
 }
 
+{% endhighlight %}
 ### EventBridge Rule
 
 Open AWS EventBridge and create a new rule with Custom Pattern as shown in the screenshot below
