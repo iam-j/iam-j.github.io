@@ -1,12 +1,12 @@
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168574596-1"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X3T46XDCC8"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-     gtag('config', 'UA-168574596-1');
+    gtag('config', 'G-X3T46XDCC8');
     </script>
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -23,11 +23,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <!-- <link rel="stylesheet" href="https://cdn.bootcss.com/octicons/3.5.0/octicons.min.css" > -->
     <link rel="stylesheet" type="text/css" href="{{ '/static/css/style.css' | prepend: site.baseurl | prepend: site.url}}" />
-     
+
     <link rel="stylesheet" disabled id="dark-reader" type="text/css" href="{{ '/static/css/dark.css' | prepend: site.baseurl | prepend: site.url}}" />
     {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ '/static/css/' | append: style | prepend: site.baseurl | prepend: site.url}}" />
     {%endfor%}
-    
+
     <script>
         if (localStorage.getItem("darkreader") == "enabled") {
             document.getElementById("dark-reader").disabled = false;
