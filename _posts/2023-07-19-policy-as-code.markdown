@@ -33,5 +33,5 @@ Few screenshots from my run on the cloud formation scripts from  [here](https://
 ![pac][pac1]
 
 
-[pac]: {{"/pac/pac.jpg" | prepend: site.imgrepo }}
-[pac1]: {{"/pac/pac1.jpg" | prepend: site.imgrepo }}
+[pac]: {{"/pac/pac.png" | prepend: site.imgrepo }}
+[pac1]: {{"/pac/pac1.png" | prepend: site.imgrepo }}
