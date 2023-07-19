@@ -4,7 +4,7 @@ title: Policy-as-code for Infrastructure
 date: 2023-07-19
 tags: iac cloudformation
 categories: iac
-image: /pac/pac.jpg
+image: /pac/pac.png
 ---
 
 If your infrastructure has been deployed and maintained as code, chances are that you might be using Terraform or CloudFormation.In those cases most probably the enforcement of policies is after thought or takes backseat.
