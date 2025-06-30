@@ -101,6 +101,7 @@ html{
     height: 100%;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    scroll-behavior: smooth;
 }
 body {
     //background-image: url({{ "/static/bg.jpg" | prepend: site.baseurl | prepend: site.url }});
@@ -346,5 +347,11 @@ button:hover, .btn:hover, input[type=button]:hover, input[type=submit]:hover, .r
   background-color: #258fb8 !important;
   color: #fff !important;
   border-color: #258fb8 !important;
+}
+
+/* Smooth rounded corners for all images, matching card style */
+img {
+  border-radius: 12px;
+  overflow: hidden;
 }
 

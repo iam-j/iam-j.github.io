@@ -1,12 +1,12 @@
     <header>
-        <nav class="navbar navbar-expand-lg navbar-tiffany bg-primary" role="navigation">
-            <div class="container">
-                <a class="navbar-brand text-light fw-bold" href="{{ site.baseurl | prepend: site.url }}/">{{ site.title }}</a>
+        <nav class="navbar navbar-expand-lg navbar-tiffany bg-primary shadow rounded-bottom-3" role="navigation">
+            <div class="container-fluid px-4">
+                <a class="navbar-brand text-light fw-bold d-flex align-items-center" href="{{ site.baseurl | prepend: site.url }}/">{{ site.title }}</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
                         <li class="nav-item {% if page.url == "/index.html" %}active{% endif %}">
                             <a class="nav-link text-light" href="{{ site.baseurl | prepend: site.url }}/"><span class="octicon octicon-book"></span>&nbsp;&nbsp;Blog</a>
                         </li>

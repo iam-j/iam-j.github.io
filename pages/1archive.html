@@ -6,11 +6,11 @@ icon: octicon-repo
 isNavItem: true
 ---
 
-<div class="container">
-  <div class="row">
+<div class="container-fluid">
+  <div class="row gap-4">
     <div class="col-lg-10 mx-auto">
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card mb-4 shadow rounded-3">
+        <div class="card-body p-4">
           {% for post in site.posts %}
             {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
             {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}

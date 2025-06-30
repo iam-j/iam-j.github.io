@@ -1,9 +1,8 @@
 ---
 layout: page
-title: Link
-permalink: /link/
-icon: octicon-link-external
-
+title: External Links
+permalink: /link-external/
+icon: octicon-link
 ---
 
 ### [github](https://github.com/iam-j)
