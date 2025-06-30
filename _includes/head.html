@@ -30,6 +30,8 @@
     {% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ '/static/css/' | append: style | prepend: site.baseurl | prepend: site.url}}" />
     {%endfor%}
 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
     <script>
         if (localStorage.getItem("darkreader") == "enabled") {
             document.getElementById("dark-reader").disabled = false;
