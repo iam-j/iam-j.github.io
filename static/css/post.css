@@ -28,8 +28,21 @@
     border-left: 5px solid #0e4e86;
     line-height: 1.5;
 }
-.post header h2{
-    color: #0e4e86;
+.post header h2,
+.card .title,
+.card h2 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0e4e86;
+  font-family: 'IBM Plex Sans', 'Inter', 'Segoe UI', Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  transition: font-size 0.18s cubic-bezier(.4,0,.2,1), color 0.18s cubic-bezier(.4,0,.2,1);
+}
+.post header h2:hover,
+.card .title:hover,
+.card h2:hover {
+  font-size: 1.7rem;
+  color: #004d8a;
 }
 .post header p.post-meta{
     color: #817c7c;
@@ -146,9 +159,19 @@
     padding: 10px 20px 10px 0px;
 }
 
-.content-navigation .content-navigation-list ul li{
-    line-height: 25px;
-    word-break: break-word;
+.content-navigation .content-navigation-list,
+.content-navigation-list ul,
+.content-navigation-list ul li {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.post-meta {
+  font-size: 1rem;
+  color: #6c757d;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .boundary{
@@ -173,4 +196,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.post, .post * {
+  font-family: 'IBM Plex Sans', 'Inter', 'Segoe UI', Arial, sans-serif !important;
 }

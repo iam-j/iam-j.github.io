@@ -6,16 +6,23 @@ icon: octicon-repo
 isNavItem: true
 ---
 
-
-{% for post in site.posts %}
-    {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
-    {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
-        {% if month != nmonth %}
-            {% if forloop.index != 1 %}<hr>{% endif %}
-            
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <div class="card mb-4">
+        <div class="card-body">
+          {% for post in site.posts %}
+            {% capture month %}{{ post.date | date: '%m%Y' }}{% endcapture %}
+            {% capture nmonth %}{{ post.next.date | date: '%m%Y' }}{% endcapture %}
+            {% if month != nmonth %}
+              {% if forloop.index != 1 %}<hr>{% endif %}
             {% endif %}
             <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"><h4>{{ post.title }}</h4></a>
             <a>{{ post.date | date: "%e %B, %Y" }}</a>
-          
-{% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 

@@ -8,110 +8,93 @@ styles : [article-list.css,category.css]
 scripts: [category.js]
 ---
 
-<div class="row index">
-
-
-    <div class="col-sm-10 col-sm-offset-1 col-lg-9 col-lg-offset-1_5">
-
-        <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <span class="octicon octicon-list-unordered"></span>&nbsp;Categories
-                <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li>
-                    <a href="javascript:void(0);" class="categories-item" cate="All">
-                        All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
-                    </a>
-                </li>
-                {% for category in site.categories %}
-                <li>
-                    <a href="javascript:void(0);" class="categories-item" cate="{{ category | first }}">
-                        {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
-                    </a>
-                </li>
-
-                {% endfor %}
-            </ul>
-        </div>
-
-
-        <div>
-            <section class="category-slice" post-cate="All">
-                {% for post in site.posts %}
-                <article>
-                    <header>
-                        <a href="{{ site.baseurl | prepend: site.url  }}/archive/#{{ post.date | date: '%Y-%m-%d' }}"><svg fill="#666666" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z"/></svg></span>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
-                    </header>
-                    <div class="module">
-
-                        {% if post.link %}
-                        <a class="title" href="{{ post.link }}">
-                            {{ post.title }}
-                            <span class="link-arrow"> &rarr;</span>
-                        </a>
-                        {% if post.image %}<img src={{ post.image | prepend: site.imgrepo }} alt="">{% endif %}
-                        <p>{{ post.content }}</p>
-      
-                        {% else %}
-                        <a class="title" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
-                            {{ post.title }}
-                        </a>
-                        {% if post.image %}<img src={{ post.image | prepend: site.imgrepo }} alt="">{% endif %}
-                        <p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
-                        <a class="readmore" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Read More</a>
-                        
-                        {% endif %}
-                        <footer>
-                            {% for tag in post.tags %}
-                            <a class="word-keep" href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
-                            {% endfor %}
-                      <!-- <span class="word-keep pull-right">
-                          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}#post-comment"><span class="octicon octicon-comment"></span>&nbsp;Comment</a>
-                          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}#post-share"><span class="octicon octicon-file-symlink-file"></span>&nbsp;Share</a>
-                      </span> -->
-                        </footer>
-                    </div>
-                </article>
-                {% endfor %}
-            </section>
-
-
-            {% for category in site.categories %}
-            <section class="category-slice" post-cate="{{category | first}}">
-                {% for posts in category  %}
-                {% for post in posts %}
-                {% if post.url %}
-                <article>
-                    <header>
-                        <a href="{{ site.baseurl | prepend: site.url  }}/archive/#{{ post.date | date: '%Y-%m-%d' }}"><svg fill="#666666"  xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z"/></svg>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
-                    </header>
-                    <div class="module">
-                        <a class="title" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.url }}{% endif %}">
-                            {{ post.title }}
-                            {% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
-                        </a>
-                        
-                        <p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
-                        <a class="readmore" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.url }}{% endif %}
-                        ">{% if post.link %}External Link{% else %}Read More{% endif %}</a>
-                        <footer>
-                            {% for tag in post.tags %}
-                            <a class="word-keep" href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
-                            {% endfor %}
-                          <!-- <span class="word-keep pull-right">
-                              <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}#post-comment"><span class="octicon octicon-comment"></span>&nbsp;Comment</a>
-                              <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}#post-share"><span class="octicon octicon-file-symlink-file"></span>&nbsp;Share</a>
-                          </span> -->
-                        </footer>
-                    </div>
-                </article>
+<div class="container-fluid px-0">
+  <div class="row index gx-0">
+    <div class="col-12">
+      <div class="dropdown mb-4">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
+          <span class="octicon octicon-list-unordered"></span>&nbsp;Categories
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li>
+            <a class="dropdown-item categories-item" href="javascript:void(0);" cate="All">
+              All&nbsp;<span class="categories-badge"> {{site.posts | size}}</span>
+            </a>
+          </li>
+          {% for category in site.categories %}
+          <li>
+            <a class="dropdown-item categories-item" href="javascript:void(0);" cate="{{ category | first }}">
+              {{ category | first }}&nbsp;<span class="categories-badge">{{ category | last | size }}</span>
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <section class="category-slice" post-cate="All">
+          {% for post in site.posts %}
+          <article class="card mb-4">
+            <div class="card-body">
+              <header>
+                <a href="{{ site.baseurl | prepend: site.url  }}/archive/#{{ post.date | date: '%Y-%m-%d' }}"><svg fill="#666666" xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z"/></svg></span>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
+              </header>
+              <div class="module">
+                {% if post.link %}
+                <a class="title" href="{{ post.link }}">
+                  {{ post.title }}
+                  <span class="link-arrow"> &rarr;</span>
+                </a>
+                {% if post.image %}<img src={{ post.image | prepend: site.imgrepo }} alt="">{% endif %}
+                <p>{{ post.content }}</p>
+                {% else %}
+                <a class="title" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+                  {{ post.title }}
+                </a>
+                {% if post.image %}<img src={{ post.image | prepend: site.imgrepo }} alt="">{% endif %}
+                <p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
+                <a class="readmore" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">Read More</a>
                 {% endif %}
-                {% endfor %}
-                {% endfor %}
-            </section>
-            {% endfor %}
-        </div>
-
+                <footer>
+                  {% for tag in post.tags %}
+                  <a class="word-keep" href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+                  {% endfor %}
+                </footer>
+              </div>
+            </div>
+          </article>
+          {% endfor %}
+        </section>
+        {% for category in site.categories %}
+        <section class="category-slice" post-cate="{{category | first}}">
+          {% for posts in category  %}
+          {% for post in posts %}
+          {% if post.url %}
+          <article class="card mb-4">
+            <div class="card-body">
+              <header>
+                <a href="{{ site.baseurl | prepend: site.url  }}/archive/#{{ post.date | date: '%Y-%m-%d' }}"><svg fill="#666666"  xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16"><path fill-rule="evenodd" d="M13 2h-1v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H6v1.5c0 .28-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5V2H2c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h11c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 12H2V5h11v9zM5 3H4V1h1v2zm6 0h-1V1h1v2zM6 7H5V6h1v1zm2 0H7V6h1v1zm2 0H9V6h1v1zm2 0h-1V6h1v1zM4 9H3V8h1v1zm2 0H5V8h1v1zm2 0H7V8h1v1zm2 0H9V8h1v1zm2 0h-1V8h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1zm2 0h-1v-1h1v1zm-8 2H3v-1h1v1zm2 0H5v-1h1v1zm2 0H7v-1h1v1zm2 0H9v-1h1v1z"/></svg>&nbsp;<span>{{ post.date | date: "%Y-%m-%d" }}</span></a>
+              </header>
+              <div class="module">
+                <a class="title" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+                  {{ post.title }}
+                  {% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
+                </a>
+                <p>{% if post.excerpt.size > 32 %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}</p>
+                <a class="readmore" href="{% if post.link %}{{ post.link }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.url }}{% endif %}">{% if post.link %}External Link{% else %}Read More{% endif %}</a>
+                <footer>
+                  {% for tag in post.tags %}
+                  <a class="word-keep" href="{{ site.baseurl | prepend: site.url }}/tags/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+                  {% endfor %}
+                </footer>
+              </div>
+            </div>
+          </article>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </section>
+        {% endfor %}
+      </div>
     </div>
+  </div>
 </div>

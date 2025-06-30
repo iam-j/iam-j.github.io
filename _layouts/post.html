@@ -1,25 +1,26 @@
 ---
 layout: default
 ---
-<div class="row">
-    <div class="content col-lg-9">
-        <div class="sheet post">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9">
+      <div class="card mb-4 post">
+        <div class="card-body">
           <header>
             {% if page.link %}
-                  <h2><a href="{{ page.link }}">{{ page.title }}</a></h2>
-            {% else %}          
-            <h2>{{ page.title }}</h2>
+              <h2><a href="{{ page.link }}">{{ page.title }}</a></h2>
+            {% else %}
+              <h2>{{ page.title }}</h2>
             {% endif %}
-
             <p class="post-meta">
-                <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+              <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
             </p>
             <p class="post-tag">
-                <span>{% for cat in page.categories %}<a href="{{ '/category' | prepend: site.baseurl | prepend: site.url }}/#{{ cat }}"><span class="octicon octicon-list-unordered"></span>&nbsp;{{ cat }}</a>{% endfor %}</span>
-                <span>{% for tag in page.tags %}
-                    <a class="word-keep" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
-                    {% endfor %}
-                </span>
+              <span>{% for cat in page.categories %}<a href="{{ '/category' | prepend: site.baseurl | prepend: site.url }}/#{{ cat }}"><span class="octicon octicon-list-unordered"></span>&nbsp;{{ cat }}</a>{% endfor %}</span>
+              <span>{% for tag in page.tags %}
+                <a class="word-keep" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+              {% endfor %}
+              </span>
             </p>
           </header>
           <hr class="boundary">
@@ -41,69 +42,68 @@ layout: default
         <!-- <div id="post-comment" class="sheet post hidden">
             <div id="disqus_thread"></div>
         </div> -->
+      </div>
     </div>
-    <div class="content-navigation col-lg-3">
-      <div class="shadow-bottom-center" >
-        <div class="content-navigation-toc">
+    <div class="col-lg-3">
+      <div class="card shadow-bottom-center mb-4">
+        <div class="card-body">
+          <div class="content-navigation-toc">
             <div class="content-navigation-header">
-                <span class="octicon octicon-list-unordered"></span>&nbsp;Topic
+              <span class="octicon octicon-list-unordered"></span>&nbsp;Topic
             </div>
             <div class="content-navigation-list toc"></div>
-        </div>
-        <div class="content-navigation-tag">
+          </div>
+          <div class="content-navigation-tag">
             <div class="content-navigation-header">
-                <span class="octicon octicon-list-unordered"></span>&nbsp;Tags
+              <span class="octicon octicon-list-unordered"></span>&nbsp;Tags
             </div>
             <div class="content-navigation-list">
-                <ul>
-                    {% for tag in page.tags %}
-                    <li>
-                        <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
+              <ul>
+                {% for tag in page.tags %}
+                <li>
+                  <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+                </li>
+                {% endfor %}
+              </ul>
             </div>
-        </div>
-        <div class="content-navigation-related">
+          </div>
+          <div class="content-navigation-related">
             <div class="content-navigation-header">
-                <span class="octicon octicon-list-unordered"></span>&nbsp;Related
+              <span class="octicon octicon-list-unordered"></span>&nbsp;Related
             </div>
             <div class="content-navigation-list">
-                <ul>
-                    {% assign postsAfterFilter = '-' | split: "-" %}
-
-                    {% for p in site.posts %}
-                        {%if p.url != page.url %}
-                            {% assign commonTagCount = 0 %}
-
-                            {% for tag in p.tags %}
-                                {% if page.tags contains tag %}
-                                    {% assign commonTagCount = commonTagCount | plus: 1 %}
-                                {% endif %}
-                            {% endfor %}
-
-                            {% for cat in p.categories %}
-                                {% if page.categories contains cat %}
-                                    {% assign commonTagCount = commonTagCount | plus: 1 %}
-                                {% endif %}
-                            {% endfor %}
-
-                            {% if commonTagCount > 0 %}
-                                {% assign postsAfterFilter = postsAfterFilter | push: p %}
-                            {% endif %}
-                        {% endif %}
+              <ul>
+                {% assign postsAfterFilter = '-' | split: "-" %}
+                {% for p in site.posts %}
+                  {%if p.url != page.url %}
+                    {% assign commonTagCount = 0 %}
+                    {% for tag in p.tags %}
+                      {% if page.tags contains tag %}
+                        {% assign commonTagCount = commonTagCount | plus: 1 %}
+                      {% endif %}
                     {% endfor %}
-
-                    {% if postsAfterFilter.size > 0 %}
-                        {% for p in postsAfterFilter limit: 15 %}
-                            <li>
-                                <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}">{{ p.title }}</a>
-                            </li>
-                        {% endfor %}
+                    {% for cat in p.categories %}
+                      {% if page.categories contains cat %}
+                        {% assign commonTagCount = commonTagCount | plus: 1 %}
+                      {% endif %}
+                    {% endfor %}
+                    {% if commonTagCount > 0 %}
+                      {% assign postsAfterFilter = postsAfterFilter | push: p %}
                     {% endif %}
-                </ul>
+                  {% endif %}
+                {% endfor %}
+                {% if postsAfterFilter.size > 0 %}
+                  {% for p in postsAfterFilter limit: 15 %}
+                    <li>
+                      <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}">{{ p.title }}</a>
+                    </li>
+                  {% endfor %}
+                {% endif %}
+              </ul>
             </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
 </div>

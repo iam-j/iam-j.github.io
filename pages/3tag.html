@@ -8,31 +8,37 @@ styles: [tagCloud.css,tags.css]
 scripts: [tagCloud.js,tags.js]
 ---
 
-<div class="tagCloud">
-    {% for tag in site.tags %}
-    <a href="#{{ tag | first }}">{{ tag | first }}</a>
-    {% endfor %}
-</div>
-
-<div>
-    <ul class="tag-box inline">
-        {% for tag in site.tags %}
-        <li><a href="#{{ tag | first }}">{{ tag | first }}<span>{{ tag | last | size }}</span></a></li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div>
-    {% for tag in site.tags %}
-    <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
-    <ul>
-        {% for posts in tag  %}{% for post in posts %}{% if post.title != null %}
-        <li itemscope><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></span> &raquo; <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}
-            {% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
-        </a></li>
-        {% endif %}{% endfor %}{% endfor %}
-    </ul>
-    {% endfor %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="tagCloud mb-3">
+            {% for tag in site.tags %}
+            <a href="#{{ tag | first }}">{{ tag | first }}</a>
+            {% endfor %}
+          </div>
+          <ul class="tag-box inline mb-4">
+            {% for tag in site.tags %}
+            <li><a href="#{{ tag | first }}">{{ tag | first }}<span>{{ tag | last | size }}</span></a></li>
+            {% endfor %}
+          </ul>
+          {% for tag in site.tags %}
+          <div class="card mb-3">
+            <div class="card-body">
+              <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
+              <ul>
+                {% for posts in tag  %}{% for post in posts %}{% if post.title != null %}
+                <li itemscope><span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></span> &raquo; <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">{{ post.title }}{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}</a></li>
+                {% endif %}{% endfor %}{% endfor %}
+              </ul>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
