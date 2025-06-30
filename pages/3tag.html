@@ -8,11 +8,11 @@ styles: [tagCloud.css,tags.css]
 scripts: [tagCloud.js,tags.js]
 ---
 
-<div class="container">
-  <div class="row">
+<div class="container-fluid">
+  <div class="row gap-4">
     <div class="col-lg-10 mx-auto">
-      <div class="card mb-4">
-        <div class="card-body">
+      <div class="card mb-4 shadow rounded-3">
+        <div class="card-body p-4">
           <div class="tagCloud mb-3">
             {% for tag in site.tags %}
             <a href="#{{ tag | first }}">{{ tag | first }}</a>
@@ -24,8 +24,8 @@ scripts: [tagCloud.js,tags.js]
             {% endfor %}
           </ul>
           {% for tag in site.tags %}
-          <div class="card mb-3">
-            <div class="card-body">
+          <div class="card mb-3 shadow rounded-3">
+            <div class="card-body p-4">
               <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
               <ul>
                 {% for posts in tag  %}{% for post in posts %}{% if post.title != null %}

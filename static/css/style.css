@@ -101,6 +101,7 @@ html{
     height: 100%;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
+    scroll-behavior: smooth;
 }
 body {
     //background-image: url({{ "/static/bg.jpg" | prepend: site.baseurl | prepend: site.url }});
