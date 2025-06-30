@@ -1,35 +1,26 @@
     <header>
-        <nav class="navbar navbar-tiffany rectangle" role="navigation">
+        <nav class="navbar navbar-expand-lg navbar-tiffany bg-primary" role="navigation">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{ site.baseurl | prepend: site.url }}/">{{ site.title }}</a>
-                    <p class="navbar-text">{{ site.description }}</p>
-                    
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        {% if page.url == "/index.html" %}
-                        <li class="active">{% else %}
-                        <li>{% endif %}
-                        <a href="{{ site.baseurl | prepend: site.url }}/" class="word-keep"><span class="octicon octicon-book"></span></span>&nbsp;&nbsp;Blog</a>
+                <a class="navbar-brand text-light fw-bold" href="{{ site.baseurl | prepend: site.url }}/">{{ site.title }}</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item {% if page.url == "/index.html" %}active{% endif %}">
+                            <a class="nav-link text-light" href="{{ site.baseurl | prepend: site.url }}/"><span class="octicon octicon-book"></span>&nbsp;&nbsp;Blog</a>
                         </li>
                         {% for p in site.pages %}{% if p.isNavItem %}
-                        {% if p.url == page.url %}
-                        <li class="active">{% else %}
-                        <li>{% endif %}
-                        <a href="{{ p.url | prepend: site.baseurl | prepend: site.url }}" class="word-keep"><span class="octicon {{ p.icon }}"></span>&nbsp;&nbsp;{{ p.title }}</a>
+                        <li class="nav-item {% if p.url == page.url %}active{% endif %}">
+                            <a class="nav-link text-light" href="{{ p.url | prepend: site.baseurl | prepend: site.url }}"><span class="octicon {{ p.icon }}"></span>&nbsp;&nbsp;{{ p.title }}</a>
                         </li>
-                        {% endif %}
-                        {% endfor %}
-                        <!-- <li><a href="#stq=" class="search-button"><span class="octicon octicon-search"></span></a></li> -->
-                        <li><a href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode">&nbsp;&nbsp;Dark mode(Beta)</a></li>
-                        <li><script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="iamj" data-color="#004d8a" data-emoji=""  data-font="Arial" data-text="" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script></li>
-
+                        {% endif %}{% endfor %}
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode">&nbsp;&nbsp;Dark mode(Beta)</a>
+                        </li>
+                        <li class="nav-item d-flex align-items-center">
+                            <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="iamj" data-color="#004d8a" data-emoji=""  data-font="Arial" data-text="" data-outline-color="#ffffff" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+                        </li>
                     </ul>
                 </div>
             </div>
