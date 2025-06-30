@@ -348,3 +348,9 @@ button:hover, .btn:hover, input[type=button]:hover, input[type=submit]:hover, .r
   border-color: #258fb8 !important;
 }
 
+/* Smooth rounded corners for all images, matching card style */
+img {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
