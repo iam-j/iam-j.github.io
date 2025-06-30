@@ -297,12 +297,14 @@ button, .btn, a, .foot-item {
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   border: 1px solid #e5e7eb;
   margin-bottom: 2rem;
+  overflow: hidden;
 }
 .card-body {
   padding: 2rem 2rem 1.5rem 2rem;
   font-family: 'IBM Plex Sans', 'Inter', 'Segoe UI', Arial, sans-serif;
   background: inherit;
   border-radius: 12px;
+  overflow: hidden;
 }
 .card-header {
   background: #f8f9fa;
@@ -353,5 +355,13 @@ button:hover, .btn:hover, input[type=button]:hover, input[type=submit]:hover, .r
 img {
   border-radius: 12px;
   overflow: hidden;
+}
+
+.card img, .card-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  object-fit: cover;
 }
 
