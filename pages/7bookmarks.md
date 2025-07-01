@@ -4,6 +4,7 @@ title: Bookmarks
 permalink: /bookmarks/
 icon: octicon-heart
 isNavItem: true
+use_card: true
 ---
 
 ### System design

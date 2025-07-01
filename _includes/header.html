@@ -6,11 +6,11 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="mainNav">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item {% if page.url == "/index.html" %}active{% endif %}">
                             <a class="nav-link text-light" href="{{ site.baseurl | prepend: site.url }}/"><span class="octicon octicon-book"></span>&nbsp;&nbsp;Blog</a>
                         </li>
-                        {% for p in site.pages %}{% if p.isNavItem %}
+                        {% for p in site.pages %}{% if p.isNavItem and p.title != 'Search' %}
                         <li class="nav-item {% if p.url == page.url %}active{% endif %}">
                             <a class="nav-link text-light" href="{{ p.url | prepend: site.baseurl | prepend: site.url }}"><span class="octicon {{ p.icon }}"></span>&nbsp;&nbsp;{{ p.title }}</a>
                         </li>
@@ -24,6 +24,9 @@
                             </a>
                         </li>
                     </ul>
+                    <form class="d-flex ms-3" role="search" method="get" action="/search/" style="max-width:220px;">
+                      <input class="form-control custom-navbar-search" type="search" name="q" placeholder="Search..." aria-label="Search" autocomplete="on">
+                    </form>
                 </div>
             </div>
         </nav>

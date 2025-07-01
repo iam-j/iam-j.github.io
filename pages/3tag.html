@@ -29,27 +29,25 @@ scripts: [tagCloud.js]
             {% endfor %}
           </ul>
           {% for tag in site.tags %}
-          <div class="card mb-3">
-            <div class="card-body">
-              <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
-              <ul class="list-group list-group-flush">
-                {% for posts in tag  %}{% for post in posts %}{% if post.title != null %}
-                <li class="list-group-item d-flex align-items-center gap-2" itemscope>
-                  <span class="entry-date text-muted small me-2" title="Published on">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
-                  </span>
-                  <span class="flex-grow-1">
-                    <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="fw-semibold text-decoration-none" itemprop="url">
-                      {{ post.title }}
-                      {% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
-                    </a>
-                  </span>
-                </li>
-                {% endif %}{% endfor %}{% endfor %}
-              </ul>
-            </div>
-          </div>
+          <section class="mb-4 pb-2 border-bottom">
+            <h2 id="{{ tag | first }}">{{ tag | first }}</h2>
+            <ul class="list-group list-group-flush">
+              {% for posts in tag  %}{% for post in posts %}{% if post.title != null %}
+              <li class="list-group-item d-flex align-items-center gap-2" itemscope>
+                <span class="entry-date text-muted small me-2" title="Published on">
+                  <span class="octicon octicon-clock"></span>
+                  <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+                </span>
+                <span class="flex-grow-1">
+                  <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" class="fw-semibold text-decoration-none" itemprop="url">
+                    {{ post.title }}
+                    {% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
+                  </a>
+                </span>
+              </li>
+              {% endif %}{% endfor %}{% endfor %}
+            </ul>
+          </section>
           {% endfor %}
         </div>
       </div>
