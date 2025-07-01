@@ -12,5 +12,8 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{'/static/js/script.js' | prepend:site.baseurl | prepend: site.url  }}"></script>
+    {% if page.url contains '/tags/' %}
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+    {% endif %}
     {% for script in page.scripts %}<script type="text/javascript" src="{{'/static/js/' | append:script | prepend:site.baseurl | prepend: site.url  }}"></script>
     {%endfor%}
