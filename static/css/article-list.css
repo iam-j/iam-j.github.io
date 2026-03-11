@@ -4,18 +4,17 @@ article{
 }
 article header{
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 1em;
-    margin-left: 5px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75em;
+    margin-left: 0;
     line-height: 1em;
-    text-shadow: 0 1px #fff;
-    font-weight: bold;
+    font-weight: 500;
     display: block;
+    font-size: 0.82rem;
 }
 
 article header a{
-    color: #666;
+    color: #9ca3af;
 }
 
 article .module {
@@ -92,11 +91,27 @@ article .readmore:hover{
 article footer{
     font-size: .85em;
     line-height: 1.6em;
-    border-top: 1px solid #ddd;
-    padding-top: 1.6em;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
     margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
 }
 article footer a{
-    color: #999;
-    margin-right: 15px;
+    color: #0e4e86;
+    background: #e8f0fe;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+article footer a:hover{
+    background: #0e4e86;
+    color: #fff;
 }
