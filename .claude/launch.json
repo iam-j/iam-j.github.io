@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jekyll-dev",
+      "runtimeExecutable": "/opt/homebrew/opt/ruby/bin/ruby",
+      "runtimeArgs": ["-S", "bundle", "exec", "jekyll", "serve", "--livereload"],
+      "port": 4000,
+      "env": {
+        "GEM_HOME": "/Users/jaswanth/.gem/ruby/4.0.0",
+        "PATH": "/Users/jaswanth/.gem/ruby/4.0.0/bin:/opt/homebrew/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  ]
+}
