@@ -198,3 +198,101 @@
 .post, .post * {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif !important;
 }
+
+/* ===========================================
+   READING TIME INLINE
+   =========================================== */
+.reading-time-inline {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+/* ===========================================
+   PREV/NEXT POST NAVIGATION
+   =========================================== */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.post-nav-link {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e8e8ec;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  min-width: 0;
+}
+.post-nav-link:hover {
+  border-color: #0e4e86;
+  box-shadow: 0 2px 8px rgba(14, 78, 134, 0.1);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.post-nav-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+.post-nav-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.post-nav-link:hover .post-nav-title {
+  color: #0e4e86;
+}
+.post-nav-next {
+  text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  .post-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* ===========================================
+   SIDEBAR CARD
+   =========================================== */
+.sidebar-card {
+  position: sticky;
+  top: 80px;
+}
+
+/* ===========================================
+   POST CONTENT ENHANCEMENTS
+   =========================================== */
+.post article {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151;
+}
+.post article h2,
+.post article h3,
+.post article h4 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Inline code */
+.post article code:not(pre code) {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.88em;
+  color: #c7254e;
+}

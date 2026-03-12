@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<!-- Reading Progress Bar -->
+<div class="reading-progress-bar" id="reading-progress"></div>
+
 <div class="container-fluid">
   <div class="row g-4">
     <div class="col-lg-9">
@@ -13,12 +16,17 @@ layout: default
               <h2>{{ page.title }}</h2>
             {% endif %}
             <p class="post-meta">
-              <span class="octicon octicon-clock"></span> {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}
+              {{ page.date | date: "%b %-d, %Y" }}
+              {% assign words = content | number_of_words %}
+              {% assign read_time = words | divided_by: 200 %}
+              {% if read_time < 1 %}{% assign read_time = 1 %}{% endif %}
+              <span class="reading-time-inline">&bull; {{ read_time }} min read</span>
+              {% if page.author %} &bull; {{ page.author }}{% endif %}
             </p>
             <p class="post-tag">
-              <span>{% for cat in page.categories %}<a href="{{ '/category' | prepend: site.baseurl | prepend: site.url }}/#{{ cat }}"><span class="octicon octicon-list-unordered"></span>&nbsp;{{ cat }}</a>{% endfor %}</span>
+              <span>{% for cat in page.categories %}<a href="{{ '/category' | prepend: site.baseurl | prepend: site.url }}/#{{ cat }}">{{ cat }}</a>{% endfor %}</span>
               <span>{% for tag in page.tags %}
-                <a class="word-keep" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+                <a class="word-keep" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}">{{ tag }}</a>
               {% endfor %}
               </span>
             </p>
@@ -28,12 +36,33 @@ layout: default
             {{content}}
           </article>
           <hr class="boundary">
+
+          <!-- Prev/Next Navigation -->
+          <nav class="post-nav">
+            {% if page.previous %}
+            <a href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" class="post-nav-link post-nav-prev">
+              <span class="post-nav-label">&larr; Previous</span>
+              <span class="post-nav-title">{{ page.previous.title }}</span>
+            </a>
+            {% else %}
+            <div class="post-nav-link post-nav-prev"></div>
+            {% endif %}
+            {% if page.next %}
+            <a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}" class="post-nav-link post-nav-next">
+              <span class="post-nav-label">Next &rarr;</span>
+              <span class="post-nav-title">{{ page.next.title }}</span>
+            </a>
+            {% else %}
+            <div class="post-nav-link post-nav-next"></div>
+            {% endif %}
+          </nav>
+
           {% include share-buttons.html %}
         </div>
       </div>
     </div>
     <div class="col-lg-3">
-      <div class="card mb-4 post">
+      <div class="card mb-4 post sidebar-card">
         <div class="card-body">
           <div class="content-navigation-toc">
             <div class="content-navigation-header">
@@ -49,7 +78,7 @@ layout: default
               <ul>
                 {% for tag in page.tags %}
                 <li>
-                  <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}#{{ tag }}"><span class="octicon octicon-tag"></span>&nbsp;{{ tag }}</a>
+                  <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}#{{ tag }}">{{ tag }}</a>
                 </li>
                 {% endfor %}
               </ul>
