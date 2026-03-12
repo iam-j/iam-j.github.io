@@ -3,8 +3,23 @@ layout: page
 title: About
 permalink: /about/
 icon: octicon-heart
+use_card: true
 ---
 
-Created a place to write about the things i liked, used and found across the world of web.Every day spent there is an excursion in life, enjoying, learning new things in life on the way.
+### Hi, I'm J
 
-This site is my foray in to a new territory of creating content which people might stumble upon and find useful.
+I'm a software engineer who loves tinkering with cloud infrastructure, DevOps tooling, and the art of building reliable systems at scale.
+
+This blog — **Excursions** — is where I document the things I've learned, used, and discovered across the world of tech. Every day in this field feels like an excursion: exploring new territories, solving puzzles, and picking up something useful along the way.
+
+---
+
+### Find me elsewhere
+
+- [GitHub](https://github.com/iam-j)
+- [Mastodon](https://mastodon.social/@htnawsaj)
+- [Buy me a coffee](https://www.buymeacoffee.com/iamj)
+
+---
+
+*If you stumble upon something useful here, that's the whole point.*

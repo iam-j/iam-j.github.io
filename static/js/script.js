@@ -3,52 +3,39 @@
 ---
 
 /**
- * 页面ready方法
+ * Page ready
  */
-$(document).ready(function() {
-
-    console.log("Page Loaded");
-
+document.addEventListener('DOMContentLoaded', function() {
     backToTop();
-    //search();
 });
 
 /**
- * 回到顶部
+ * Back to top button
  */
 function backToTop() {
-    $("[data-toggle='tooltip']").tooltip();
-    var st = $(".page-scrollTop");
-    var $window = $(window);
-    var topOffset;
-    //滚页面才显示返回顶部
-    $window.scroll(function() {
-        var currnetTopOffset = $window.scrollTop();
-        if (currnetTopOffset > 0 && topOffset > currnetTopOffset) {
-            st.fadeIn(500);
+    var st = document.querySelector('.page-scrollTop');
+    if (!st) return;
+    var topOffset = 0;
+
+    window.addEventListener('scroll', function() {
+        var currentTopOffset = window.scrollY;
+        if (currentTopOffset > 0 && topOffset > currentTopOffset) {
+            st.style.display = 'block';
+            st.style.opacity = '0.7';
         } else {
-            st.fadeOut(500);
+            st.style.display = 'none';
         }
-        topOffset = currnetTopOffset;
+        topOffset = currentTopOffset;
     });
 
-    //点击回到顶部
-    st.click(function() {
-        $window.scrollTop(0)
+    st.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-
 }
 
-function search(){
-    (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.appendChild(s);
-    })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-    _st('install','{{site.swiftype.searchId}}','2.0.0');
-}
-
+/**
+ * Dark mode toggle
+ */
 function dark_toggle() {
     var el1 = document.getElementById("dark-reader");
     if(el1.disabled) {
@@ -59,6 +46,3 @@ function dark_toggle() {
         localStorage.setItem("darkreader", "disabled");
     }
 }
-
-
-
