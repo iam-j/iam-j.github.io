@@ -294,15 +294,23 @@ input.gsc-input {
 /* --- Featured cards dark mode --- */
 .featured-card {
     background: linear-gradient(135deg, #1a3a5c 0%, #0e4e86 100%) !important;
+    color: #fff !important;
 }
 .featured-card-alt {
     background: linear-gradient(135deg, #0e4e86 0%, #1a6bb5 100%) !important;
 }
 .featured-card:hover {
     box-shadow: 0 8px 24px rgba(14, 78, 134, 0.4) !important;
+    color: #fff !important;
 }
 .featured-card h3 {
     color: #fff !important;
+}
+.featured-tag {
+    color: #fff !important;
+}
+.featured-date {
+    color: rgba(255,255,255,0.75) !important;
 }
 
 /* --- Section label dark mode --- */
@@ -411,11 +419,31 @@ article .readmore:hover {
 /* --- Card image wrap dark mode --- */
 .card-image-wrap {
     border-color: #2a2a2a !important;
+    background: #1a1a1a !important;
+}
+
+/* --- Sidebar tag pills dark mode --- */
+.sidebar-tag-pill {
+    background: rgba(14, 78, 134, 0.25) !important;
+    color: #90caf9 !important;
+}
+.sidebar-tag-pill:hover {
+    background: #0e4e86 !important;
+    color: #fff !important;
 }
 
 /* --- Sidebar card dark mode --- */
 .sidebar-card {
     background: #1e1e1e !important;
+}
+.content-navigation-list ul li {
+    border-bottom-color: #2a2a2a !important;
+}
+.content-navigation-list ul li a {
+    color: #9ca3af !important;
+}
+.content-navigation-list ul li a:hover {
+    color: #90caf9 !important;
 }
 
 /* --- Navbar transparent dark mode --- */

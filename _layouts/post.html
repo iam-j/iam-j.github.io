@@ -24,11 +24,9 @@ layout: default
               {% if page.author %} &bull; {{ page.author }}{% endif %}
             </p>
             <p class="post-tag">
-              <span>{% for cat in page.categories %}<a href="{{ '/category' | prepend: site.baseurl | prepend: site.url }}/#{{ cat }}">{{ cat }}</a>{% endfor %}</span>
-              <span>{% for tag in page.tags %}
-                <a class="word-keep" href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}">{{ tag }}</a>
+              {% for tag in page.tags %}
+                <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}/#{{ tag }}">{{ tag }}</a>
               {% endfor %}
-              </span>
             </p>
           </header>
           <hr class="boundary">
@@ -74,14 +72,10 @@ layout: default
             <div class="content-navigation-header">
               <span class="octicon octicon-list-unordered"></span>&nbsp;Tags
             </div>
-            <div class="content-navigation-list">
-              <ul>
-                {% for tag in page.tags %}
-                <li>
-                  <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}#{{ tag }}">{{ tag }}</a>
-                </li>
-                {% endfor %}
-              </ul>
+            <div class="sidebar-tags">
+              {% for tag in page.tags %}
+                <a href="{{ '/tags' | prepend: site.baseurl | prepend: site.url }}#{{ tag }}" class="sidebar-tag-pill">{{ tag }}</a>
+              {% endfor %}
             </div>
           </div>
           <div class="content-navigation-related">
