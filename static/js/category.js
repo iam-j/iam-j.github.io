@@ -1,39 +1,38 @@
 /**
- * 页面ready方法
+ * Page ready
  */
-$(document).ready(function() {
+document.addEventListener('DOMContentLoaded', function() {
     categoryDisplay();
 });
 
 /**
- * 分类展示
- * 点击右侧的分类展示时
- * 左侧的相关裂变展开或者收起
- * @return {[type]} [description]
+ * Category display
+ * When a category is clicked on the right sidebar,
+ * show/hide the corresponding post sections on the left
  */
 function categoryDisplay() {
     selectCategory();
-    $('.categories-item').click(function() {
-        window.location.hash = "#" + $(this).attr("cate");
-        selectCategory();
+    document.querySelectorAll('.categories-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+            window.location.hash = '#' + this.getAttribute('cate');
+            selectCategory();
+        });
     });
 }
 
-function selectCategory(){
-    var exclude = ["",undefined];
+function selectCategory() {
     var thisId = window.location.hash.substring(1);
-    var allow = true;
-    for(var i in exclude){
-        if(thisId == exclude[i]){
-            allow = false;
-            break;
-        }
-    }
-    if(allow){
-        var cate = thisId;
-        $("section[post-cate!='" + cate + "']").hide(200);
-        $("section[post-cate='" + cate + "']").show(200);
+    if (thisId) {
+        document.querySelectorAll('section[post-cate]').forEach(function(section) {
+            if (section.getAttribute('post-cate') !== thisId) {
+                section.style.display = 'none';
+            } else {
+                section.style.display = '';
+            }
+        });
     } else {
-        $("section[post-cate='All']").show();
+        document.querySelectorAll("section[post-cate='All']").forEach(function(section) {
+            section.style.display = '';
+        });
     }
 }
