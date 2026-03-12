@@ -264,3 +264,173 @@ input.gsc-input {
 .navbar-tiffany .nav-link {
     color: #e0e0e0 !important;
 }
+
+/* --- Hero section dark mode --- */
+.hero-section {
+    border-bottom-color: #2a2a2a !important;
+}
+.hero-title {
+    color: #e5e7eb !important;
+}
+.hero-subtitle {
+    color: #9ca3af !important;
+}
+.hero-link {
+    color: #90caf9 !important;
+}
+.hero-link:hover {
+    border-bottom-color: #90caf9 !important;
+    color: #90caf9 !important;
+}
+.hero-link-rss {
+    background: rgba(14, 78, 134, 0.25) !important;
+    color: #90caf9 !important;
+}
+.hero-link-rss:hover {
+    background: #0e4e86 !important;
+    color: #fff !important;
+}
+
+/* --- Featured cards dark mode --- */
+.featured-card {
+    background: linear-gradient(135deg, #1a3a5c 0%, #0e4e86 100%) !important;
+}
+.featured-card-alt {
+    background: linear-gradient(135deg, #0e4e86 0%, #1a6bb5 100%) !important;
+}
+.featured-card:hover {
+    box-shadow: 0 8px 24px rgba(14, 78, 134, 0.4) !important;
+}
+.featured-card h3 {
+    color: #fff !important;
+}
+
+/* --- Section label dark mode --- */
+.section-label {
+    color: #6b7280 !important;
+}
+
+/* --- Card excerpt dark mode --- */
+.card-excerpt {
+    color: #9ca3af !important;
+}
+
+/* --- Reading time dark mode --- */
+.reading-time,
+.reading-time-inline {
+    color: #6b7280 !important;
+}
+.post-date-label {
+    color: #6b7280 !important;
+}
+
+/* --- Article title dark mode --- */
+article .title:not([style*="color:"]) {
+    color: #e5e7eb !important;
+}
+article .title:not([style*="color:"]):hover {
+    color: #90caf9 !important;
+}
+
+/* --- Read More button dark mode --- */
+article .readmore {
+    color: #90caf9 !important;
+    border-color: #90caf9 !important;
+    background: transparent !important;
+}
+article .readmore:hover {
+    background: #0e4e86 !important;
+    color: #fff !important;
+    border-color: #0e4e86 !important;
+}
+
+/* --- Pagination dark mode --- */
+.pagination li a,
+.pagination li span {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+    color: #b0b8c4 !important;
+}
+.pagination li a:hover {
+    background: #0e4e86 !important;
+    color: #fff !important;
+    border-color: #0e4e86 !important;
+}
+.pagination li.active span {
+    background: #0e4e86 !important;
+    color: #fff !important;
+    border-color: #0e4e86 !important;
+}
+
+/* --- Progress bar dark mode --- */
+.reading-progress-bar {
+    background: linear-gradient(90deg, #0e4e86, #90caf9) !important;
+}
+
+/* --- Prev/Next nav dark mode --- */
+.post-nav-link {
+    border-color: #2a2a2a !important;
+    background: #1e1e1e !important;
+}
+.post-nav-link:hover {
+    border-color: #0e4e86 !important;
+    box-shadow: 0 2px 8px rgba(14, 78, 134, 0.2) !important;
+}
+.post-nav-label {
+    color: #6b7280 !important;
+}
+.post-nav-title {
+    color: #e5e7eb !important;
+}
+.post-nav-link:hover .post-nav-title {
+    color: #90caf9 !important;
+}
+
+/* --- Code copy button dark mode --- */
+.code-copy-btn {
+    background: rgba(255,255,255,0.08) !important;
+    border-color: rgba(255,255,255,0.12) !important;
+    color: #9ca3af !important;
+}
+.code-copy-btn:hover {
+    background: rgba(255,255,255,0.15) !important;
+    color: #e0e0e0 !important;
+}
+.code-copy-btn.copied {
+    background: #22c55e !important;
+    color: #fff !important;
+    border-color: #22c55e !important;
+}
+
+/* --- Inline code dark mode --- */
+.post article code:not(pre code) {
+    background: #2a2a2a !important;
+    color: #e8a0b4 !important;
+}
+
+/* --- Card image wrap dark mode --- */
+.card-image-wrap {
+    border-color: #2a2a2a !important;
+}
+
+/* --- Sidebar card dark mode --- */
+.sidebar-card {
+    background: #1e1e1e !important;
+}
+
+/* --- Navbar transparent dark mode --- */
+.navbar-tiffany.navbar-transparent {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom-color: transparent !important;
+}
+.navbar-tiffany.navbar-transparent .navbar-brand,
+.navbar-tiffany.navbar-transparent .nav-link {
+    color: #e0e0e0 !important;
+}
+.navbar-tiffany.navbar-transparent .navbar-toggler-icon {
+    filter: none !important;
+}
+.navbar-tiffany.navbar-scrolled {
+    background: rgba(18, 18, 18, 0.92) !important;
+}

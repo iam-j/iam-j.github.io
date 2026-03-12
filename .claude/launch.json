@@ -4,7 +4,7 @@
     {
       "name": "jekyll-dev",
       "runtimeExecutable": "/opt/homebrew/opt/ruby/bin/ruby",
-      "runtimeArgs": ["-S", "bundle", "exec", "jekyll", "serve", "--livereload"],
+      "runtimeArgs": ["-S", "bundle", "exec", "jekyll", "serve", "--livereload", "--config", "_config.yml,_config_dev.yml"],
       "port": 4000,
       "env": {
         "GEM_HOME": "/Users/jaswanth/.gem/ruby/4.0.0",

@@ -545,3 +545,113 @@ img {
   }
 }
 
+/* ===========================================
+   READING PROGRESS BAR
+   =========================================== */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0e4e86, #258fb8);
+  width: 0%;
+  z-index: 1040;
+  transition: width 0.1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ===========================================
+   SITE FOOTER
+   =========================================== */
+/* Footer styles are inline in footer.html */
+
+/* ===========================================
+   NAVBAR SCROLL: TRANSPARENT TO SOLID
+   =========================================== */
+.navbar-tiffany.navbar-transparent {
+  background: transparent;
+  box-shadow: none;
+  border-bottom-color: transparent;
+}
+.navbar-tiffany.navbar-transparent .navbar-brand,
+.navbar-tiffany.navbar-transparent .nav-link {
+  color: #1a1a1a !important;
+  transition: color 0.3s ease;
+}
+.navbar-tiffany.navbar-transparent .navbar-toggler-icon {
+  filter: invert(1) grayscale(100%) brightness(0);
+}
+.navbar-tiffany.navbar-scrolled {
+  background: rgba(14, 78, 134, 0.92);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.navbar-tiffany.navbar-scrolled .navbar-brand,
+.navbar-tiffany.navbar-scrolled .nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+.navbar-tiffany.navbar-scrolled .navbar-toggler-icon {
+  filter: none;
+}
+.navbar-tiffany.navbar-transparent .custom-navbar-search {
+  color: #1a1a1a !important;
+  border-color: #c0c8d4 !important;
+}
+.navbar-tiffany.navbar-transparent .custom-navbar-search::placeholder {
+  color: #9ca3af !important;
+}
+.navbar-tiffany.navbar-scrolled .custom-navbar-search {
+  color: #fff !important;
+  border-color: #0e4e86 !important;
+}
+.navbar-tiffany.navbar-scrolled .custom-navbar-search::placeholder {
+  color: #e0eaf7 !important;
+}
+
+/* ===========================================
+   CODE BLOCK IMPROVEMENTS
+   =========================================== */
+.highlight {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.highlight pre {
+  border-radius: 12px;
+  padding: 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+.code-copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #9ca3af;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+  z-index: 5;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.highlight:hover .code-copy-btn {
+  opacity: 1;
+}
+.code-copy-btn:hover {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+.code-copy-btn.copied {
+  background: #22c55e;
+  color: #fff;
+  border-color: #22c55e;
+  opacity: 1;
+}
+
