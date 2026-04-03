@@ -1,0 +1,109 @@
+name: Add Bookmark
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Bookmark URL'
+        required: true
+        type: string
+      title:
+        description: 'Bookmark title'
+        required: true
+        type: string
+      category:
+        description: 'Category (e.g. System Design, Coding, DevOps, Web, Language, Career)'
+        required: true
+        type: string
+
+jobs:
+  add-bookmark:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp
+
+      - name: Add bookmark to file
+        run: |
+          FILE="pages/7bookmarks.md"
+          URL="${{ github.event.inputs.url }}"
+          TITLE="${{ github.event.inputs.title }}"
+          CATEGORY="${{ github.event.inputs.category }}"
+          NEW_ENTRY="- [${TITLE}](${URL})"
+
+          # Check if category header exists (case-insensitive match)
+          if grep -qi "^### ${CATEGORY}$" "$FILE"; then
+            # Find the category and append after the last entry in that section
+            python3 << 'PYEOF'
+          import re, os
+
+          file_path = os.environ.get("FILE", "pages/7bookmarks.md")
+          url = os.environ.get("URL", "")
+          title = os.environ.get("TITLE", "")
+          category = os.environ.get("CATEGORY", "")
+          new_entry = f"- [{title}]({url})"
+
+          with open(file_path, "r") as f:
+              content = f.read()
+
+          # Check if this URL already exists
+          if url in content:
+              print(f"URL already exists in bookmarks: {url}")
+              exit(0)
+
+          lines = content.split("\n")
+          result = []
+          found_category = False
+          inserted = False
+
+          for i, line in enumerate(lines):
+              result.append(line)
+              # Found our category header
+              if line.strip().lower() == f"### {category.lower()}":
+                  found_category = True
+                  continue
+              # We're in our category, look for the end of the list
+              if found_category and not inserted:
+                  # Check if next line is empty or a new header or EOF
+                  next_idx = i + 1
+                  is_last_entry = (
+                      next_idx >= len(lines) or
+                      lines[next_idx].strip() == "" or
+                      lines[next_idx].startswith("###")
+                  )
+                  if line.startswith("- ") and is_last_entry:
+                      result.append(new_entry)
+                      inserted = True
+
+          with open(file_path, "w") as f:
+              f.write("\n".join(result))
+
+          if inserted:
+              print(f"Added: {new_entry} under {category}")
+          else:
+              print(f"Could not find insertion point for category: {category}")
+              exit(1)
+          PYEOF
+          else
+            # Category doesn't exist — append new category section at end of file
+            # Remove trailing newlines, then add new section
+            sed -i -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$FILE"
+            printf "\n\n### %s\n\n%s\n" "$CATEGORY" "$NEW_ENTRY" >> "$FILE"
+            echo "Created new category '${CATEGORY}' with: ${NEW_ENTRY}"
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "bookmark-bot"
+          git config user.email "bookmark-bot@users.noreply.github.com"
+          git add pages/7bookmarks.md
+          # Only commit if there are changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit (bookmark may already exist)"
+          else
+            git commit -m "bookmark: ${{ github.event.inputs.title }}"
+            git push
+          fi
