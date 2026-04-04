@@ -84,7 +84,9 @@ use_card: false
     <div class="app-info">
       <h3>RunDown - Deadline Engine</h3>
       <p>Set goals with deadlines, break them into dependent steps, and watch the countdown. RunDown keeps you focused on what matters next with a visual dependency chain and real-time progress tracking.</p>
-      <span class="app-badge" style="background:#1a1a1a;color:#fff;padding:8px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;">Coming Soon</span>
+      <a class="app-badge" href="https://apps.apple.com/in/app/rundown-deadline-engine/id6761473099" target="_blank">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      </a>
     </div>
   </div>
   <img class="app-screenshot" src="{{ '/apps/rundown.png' | prepend: site.imgrepo }}" alt="RunDown - Deadline Engine screenshot">
