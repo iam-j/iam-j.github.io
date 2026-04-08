@@ -92,6 +92,17 @@ use_card: false
   <img class="app-screenshot" src="{{ '/apps/rundown.png' | prepend: site.imgrepo }}" alt="RunDown - Deadline Engine screenshot">
 </div>
 
+<div class="app-card">
+  <div class="app-card-header">
+    <div class="app-info">
+      <h3>ThisDay - Photo Memories</h3>
+      <p>Rediscover your favorite moments. ThisDay surfaces photos from this exact day in past years — completely private, all on-device. No accounts. No cloud. No tracking.</p>
+      <span class="app-badge" style="background:#1a1a1a;color:#fff;padding:8px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;">Coming Soon</span>
+    </div>
+  </div>
+  <img class="app-screenshot" src="{{ '/apps/thisday.png' | prepend: site.imgrepo }}" alt="ThisDay - Photo Memories screenshot">
+</div>
+
 ---
 
 <div class="support-section">
