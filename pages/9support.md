@@ -71,7 +71,7 @@ use_card: false
     <div class="app-info">
       <h3>Skating Tracker</h3>
       <p>Track skating competitions, events, medals and stats all in one place. Stay on top of your season with upcoming event countdowns, results history and performance insights.</p>
-      <a class="app-badge" href="https://apps.apple.com/us/app/skating-tracker/id6760656201" target="_blank">
+      <a class="app-badge" href="https://apps.apple.com/app/skating-tracker/id6760656201" target="_blank">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
       </a>
     </div>
@@ -84,7 +84,7 @@ use_card: false
     <div class="app-info">
       <h3>RunDown - Deadline Engine</h3>
       <p>Set goals with deadlines, break them into dependent steps, and watch the countdown. RunDown keeps you focused on what matters next with a visual dependency chain and real-time progress tracking.</p>
-      <a class="app-badge" href="https://apps.apple.com/in/app/rundown-deadline-engine/id6761473099" target="_blank">
+      <a class="app-badge" href="https://apps.apple.com/app/rundown-deadline-engine/id6761473099" target="_blank">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
       </a>
     </div>
@@ -97,7 +97,9 @@ use_card: false
     <div class="app-info">
       <h3>ThisDay - Photo Memories</h3>
       <p>Rediscover your favorite moments. ThisDay surfaces photos from this exact day in past years — completely private, all on-device. No accounts. No cloud. No tracking.</p>
-      <span class="app-badge" style="background:#1a1a1a;color:#fff;padding:8px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;">Coming Soon</span>
+      <a class="app-badge" href="https://apps.apple.com/app/thisday-photo-memories/id6761721260" target="_blank">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      </a>
     </div>
   </div>
   <img class="app-screenshot" src="{{ '/apps/thisday.png' | prepend: site.imgrepo }}" alt="ThisDay - Photo Memories screenshot">
