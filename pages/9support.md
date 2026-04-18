@@ -105,6 +105,17 @@ use_card: false
   <img class="app-screenshot" src="{{ '/apps/thisday.png' | prepend: site.imgrepo }}" alt="ThisDay - Photo Memories screenshot">
 </div>
 
+<div class="app-card">
+  <div class="app-card-header">
+    <div class="app-info">
+      <h3>Readio - Listen to the Web</h3>
+      <p>Turn any web article into audio you can listen to. Readio transforms articles, blog posts, and web pages into a personal podcast feed - powered entirely by your device. No subscriptions, no cloud processing, no account required.</p>
+      <span class="app-badge" style="background:#1a1a1a;color:#fff;padding:8px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;">Coming Soon</span>
+    </div>
+  </div>
+  <img class="app-screenshot" src="{{ '/apps/readio.png' | prepend: site.imgrepo }}" alt="Readio - Listen to the Web screenshot">
+</div>
+
 ---
 
 <div class="support-section">
