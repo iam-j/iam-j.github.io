@@ -110,7 +110,9 @@ use_card: false
     <div class="app-info">
       <h3>Readio - Listen to the Web</h3>
       <p>Turn any web article into audio you can listen to. Readio transforms articles, blog posts, and web pages into a personal podcast feed - powered entirely by your device. No subscriptions, no cloud processing, no account required.</p>
-      <span class="app-badge" style="background:#1a1a1a;color:#fff;padding:8px 16px;border-radius:8px;font-size:0.85rem;font-weight:600;">Coming Soon</span>
+      <a class="app-badge" href="https://apps.apple.com/app/readio-listen-to-the-web/id6762374434" target="_blank">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      </a>
     </div>
   </div>
   <img class="app-screenshot" src="{{ '/apps/readio.png' | prepend: site.imgrepo }}" alt="Readio - Listen to the Web screenshot">
