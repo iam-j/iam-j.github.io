@@ -125,8 +125,11 @@ use_card: false
   .readio-feature-visual img {
     max-width: 300px;
     width: 100%;
-    border-radius: 24px;
-    box-shadow: 0 20px 50px rgba(14,78,134,0.18), 0 4px 12px rgba(0,0,0,0.06);
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent;
+    overflow: visible;
+    filter: drop-shadow(0 20px 30px rgba(14,78,134,0.18)) drop-shadow(0 4px 8px rgba(0,0,0,0.08));
     transition: transform 0.3s ease;
   }
   .readio-feature-visual img:hover { transform: translateY(-4px); }
@@ -138,8 +141,11 @@ use_card: false
   }
   .readio-feature-visual-pair img {
     max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 12px 32px rgba(14,78,134,0.15);
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: transparent;
+    overflow: visible;
+    filter: drop-shadow(0 12px 24px rgba(14,78,134,0.15));
   }
 
   /* Privacy / what it doesn't do - grid of cards */
