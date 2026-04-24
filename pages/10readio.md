@@ -241,9 +241,9 @@ use_card: false
 </section>
 
 <div class="readio-intro">
-  <p>I read a lot online. Long essays, research papers, deep-dive blog posts I bookmarked and never got back to. I <em>also</em> spend a lot of time doing things where I can't look at a screen — commuting, cooking, walking, at the gym.</p>
+  <p>I read a lot online. Long essays, research papers, deep-dive blog posts I bookmarked and never got back to. I <em>also</em> spend a lot of time doing things where I can't look at a screen - commuting, cooking, walking, at the gym.</p>
   <p>Every text-to-speech app I tried wanted a subscription, needed an account, shipped my articles to somebody's cloud TTS, or buried the one feature I cared about under three paywalls. Safari's "Listen to Page" works but has no queue, no playlists, no resume, no speed memory, and forgets everything the moment you close the tab.</p>
-  <p>So I built <strong>Readio</strong> — the app I wish had already existed. Built on Apple's on-device speech engine. No backend. No account. No subscription.</p>
+  <p>So I built <strong>Readio</strong> - the app I wish had already existed. Built on Apple's on-device speech engine. No backend. No account. No subscription.</p>
 </div>
 
 <section class="readio-feature">
@@ -251,7 +251,7 @@ use_card: false
     <span class="readio-feature-eyebrow">Library</span>
     <h2>Your articles, as a listening library</h2>
     <p>The home screen borrows from something that already works: Apple Music. Articles are tracks, playlists are playlists, and the stuff you added yesterday sits right where you'd expect "Recently Added" to sit.</p>
-    <p>No new mental model — you already know how this works. Swipe to delete, drag to reorder, tap to listen. That's it.</p>
+    <p>No new mental model - you already know how this works. Swipe to delete, drag to reorder, tap to listen. That's it.</p>
   </div>
   <div class="readio-feature-visual">
     <img src="{{ '/static/img/readio/library.png' | relative_url }}" alt="Readio library view">
@@ -262,8 +262,8 @@ use_card: false
   <div class="readio-feature-text">
     <span class="readio-feature-eyebrow">Now Playing</span>
     <h2>A player that respects the source</h2>
-    <p>Big artwork pulled from the article's OG image. Title, source, scrubbable progress. Speed chip (0.5× through 2×), voice chip (pick any Siri voice — including the premium neural voices most apps hide), and a reader chip to flip to the text mid-listen.</p>
-    <p>Lock screen, Control Center, AirPods squeeze, CarPlay — everything just works, because Readio routes through the same <code style="background:#e8f0fe;color:#0e4e86;padding:2px 8px;border-radius:6px;font-size:0.9em;">MPNowPlayingInfoCenter</code> plumbing Apple Music uses.</p>
+    <p>Big artwork pulled from the article's OG image. Title, source, scrubbable progress. Speed chip (0.5× through 2×), voice chip (pick any Siri voice - including the premium neural voices most apps hide), and a reader chip to flip to the text mid-listen.</p>
+    <p>Lock screen, Control Center, AirPods squeeze, CarPlay - everything just works, because Readio routes through the same <code style="background:#e8f0fe;color:#0e4e86;padding:2px 8px;border-radius:6px;font-size:0.9em;">MPNowPlayingInfoCenter</code> plumbing Apple Music uses.</p>
   </div>
   <div class="readio-feature-visual">
     <img src="{{ '/static/img/readio/nowplaying.png' | relative_url }}" alt="Readio now playing screen">
@@ -275,7 +275,7 @@ use_card: false
     <span class="readio-feature-eyebrow">Follow Along</span>
     <h2>Karaoke for articles</h2>
     <p>Every sentence highlights as it's spoken. Glance down, find your place, keep going. Tap a line to jump there.</p>
-    <p>It's the same interaction Apple Music uses for lyrics, applied to prose — and once you have it, going back to a podcast app that can't do this feels broken.</p>
+    <p>It's the same interaction Apple Music uses for lyrics, applied to prose - and once you have it, going back to a podcast app that can't do this feels broken.</p>
   </div>
   <div class="readio-feature-visual">
     <img src="{{ '/static/img/readio/lyrics.png' | relative_url }}" alt="Readio lyric-style follow-along">
@@ -286,7 +286,7 @@ use_card: false
   <div class="readio-feature-text">
     <span class="readio-feature-eyebrow">Reader View</span>
     <h2>Clean text, when you want to read</h2>
-    <p>Sometimes you just want the clean text without the chrome, cookie banners, and newsletter modals. Readio parses articles with a Readability-style extractor the moment you add them, so the reader view is ready offline — with Dynamic Type, Dark Mode, and a few paper-inspired themes for eye comfort.</p>
+    <p>Sometimes you just want the clean text without the chrome, cookie banners, and newsletter modals. Readio parses articles with a Readability-style extractor the moment you add them, so the reader view is ready offline - with Dynamic Type, Dark Mode, and a few paper-inspired themes for eye comfort.</p>
     <p>Listening and reading aren't separate modes. You can switch at any point and pick up exactly where the audio was.</p>
   </div>
   <div class="readio-feature-visual">
@@ -301,7 +301,7 @@ use_card: false
   <div class="readio-feature-text">
     <span class="readio-feature-eyebrow">Share</span>
     <h2>Share a great line, instantly</h2>
-    <p>Hit a line that stuck with you? Tap a sentence, export a snapshot — the quote, the source, the Readio watermark — and send it to a friend.</p>
+    <p>Hit a line that stuck with you? Tap a sentence, export a snapshot - the quote, the source, the Readio watermark - and send it to a friend.</p>
     <p>It's the feature Spotify added to music and Kindle added to books. Articles deserved it too.</p>
   </div>
   <div class="readio-feature-visual">
@@ -330,18 +330,18 @@ use_card: false
     </div>
     <div class="readio-privacy-item">
       <strong>No cloud TTS bill</strong>
-      <span>Readio uses Apple's on-device voices — free, private, and work on the subway with no signal.</span>
+      <span>Readio uses Apple's on-device voices - free, private, and work on the subway with no signal.</span>
     </div>
   </div>
 </section>
 
 <section class="readio-final">
   <h2>Who it's for</h2>
-  <p>Power readers who already have a pile of bookmarks, already pay for the iPhone, already have AirPods — and don't want to rent a fifth subscription to turn text into sound.</p>
+  <p>Power readers who already have a pile of bookmarks, already pay for the iPhone, already have AirPods - and don't want to rent a fifth subscription to turn text into sound.</p>
   <a class="readio-cta" href="https://apps.apple.com/app/readio-listen-to-the-web/id6762374434" target="_blank">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
     Get Readio on the App Store
   </a>
 </section>
 
-<p class="readio-colophon">Built by <a href="{{ '/about/' | relative_url }}">J</a> — Swift 6, SwiftUI, SwiftData, AVSpeechSynthesizer. Zero third-party dependencies except SwiftSoup for HTML parsing.</p>
+<p class="readio-colophon">Built by <a href="{{ '/about/' | relative_url }}">J</a> - Swift 6, SwiftUI, SwiftData, AVSpeechSynthesizer. Zero third-party dependencies except SwiftSoup for HTML parsing.</p>
