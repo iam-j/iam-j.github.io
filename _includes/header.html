@@ -13,6 +13,19 @@
       .sidebar-tags { display:flex; flex-wrap:wrap; gap:6px; }
       .sidebar-tag-pill { display:inline-block; background:#e8f0fe; color:#0e4e86; padding:3px 12px; border-radius:100px; font-size:0.8rem; font-weight:600; text-decoration:none; }
       .sidebar-tag-pill:hover { background:#0e4e86; color:#fff; }
+      /* Apps dropdown in navbar */
+      .navbar-tiffany .dropdown-menu { border:1px solid #e5e7eb; border-radius:12px; box-shadow:0 8px 24px rgba(14,78,134,0.12); padding:0.4rem; margin-top:0.5rem; min-width:220px; }
+      .navbar-tiffany .dropdown-item { border-radius:8px; padding:0.5rem 0.75rem; font-size:0.92rem; color:#374151; display:flex; align-items:center; }
+      .navbar-tiffany .dropdown-item:hover,
+      .navbar-tiffany .dropdown-item:focus { background:#e8f0fe; color:#0e4e86; }
+      .navbar-tiffany .dropdown-item.active { background:#0e4e86; color:#fff; }
+      .navbar-tiffany .dropdown-item .octicon { margin-right:0.15rem; }
+      .navbar-tiffany .dropdown-divider { margin:0.4rem 0.25rem; border-color:#e5e7eb; }
+      [data-theme="dark"] .navbar-tiffany .dropdown-menu { background:#1f2937; border-color:#374151; }
+      [data-theme="dark"] .navbar-tiffany .dropdown-item { color:#e5e7eb; }
+      [data-theme="dark"] .navbar-tiffany .dropdown-item:hover,
+      [data-theme="dark"] .navbar-tiffany .dropdown-item:focus { background:#374151; color:#fff; }
+      [data-theme="dark"] .navbar-tiffany .dropdown-divider { border-color:#374151; }
     </style>
     <header style="position: sticky; top: 0; z-index: 1030;">
         <nav class="navbar navbar-expand-lg navbar-tiffany shadow-sm" role="navigation">
@@ -26,11 +39,29 @@
                         <li class="nav-item {% if page.url == "/index.html" %}active{% endif %}">
                             <a class="nav-link text-light" href="{{ site.baseurl | prepend: site.url }}/"><span class="octicon octicon-book"></span>&nbsp;&nbsp;Blog</a>
                         </li>
-                        {% for p in site.pages %}{% if p.isNavItem and p.title != 'Search' %}
+                        {% for p in site.pages %}{% if p.isNavItem and p.title != 'Search' and p.isAppPage != true %}
                         <li class="nav-item {% if p.url == page.url %}active{% endif %}">
                             <a class="nav-link text-light" href="{{ p.url | prepend: site.baseurl | prepend: site.url }}"><span class="octicon {{ p.icon }}"></span>&nbsp;&nbsp;{{ p.title }}</a>
                         </li>
                         {% endif %}{% endfor %}
+                        {% assign app_pages = site.pages | where: "isAppPage", true | sort: "title" %}
+                        {% if app_pages.size > 0 %}
+                        {% assign apps_active = false %}
+                        {% for ap in app_pages %}{% if ap.url == page.url %}{% assign apps_active = true %}{% endif %}{% endfor %}
+                        {% if page.url == '/support/' %}{% assign apps_active = true %}{% endif %}
+                        <li class="nav-item dropdown {% if apps_active %}active{% endif %}">
+                            <a class="nav-link dropdown-toggle text-light" href="#" id="appsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="octicon octicon-device-mobile"></span>&nbsp;&nbsp;Apps
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="appsDropdown">
+                                {% for ap in app_pages %}
+                                <li><a class="dropdown-item {% if ap.url == page.url %}active{% endif %}" href="{{ ap.url | prepend: site.baseurl | prepend: site.url }}"><span class="octicon {{ ap.icon }}"></span>&nbsp;&nbsp;{{ ap.title }}</a></li>
+                                {% endfor %}
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{{ '/support/' | prepend: site.baseurl | prepend: site.url }}"><span class="octicon octicon-apps"></span>&nbsp;&nbsp;All apps &amp; support</a></li>
+                            </ul>
+                        </li>
+                        {% endif %}
                         <li class="nav-item">
                             <a class="nav-link text-light" href="javascript:void(0)" onclick="dark_toggle();return false;" title="Toggle night mode">&nbsp;&nbsp;Dark mode</a>
                         </li>

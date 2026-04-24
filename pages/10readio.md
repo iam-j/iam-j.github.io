@@ -3,7 +3,8 @@ layout: page
 title: Readio
 permalink: /readio/
 icon: octicon-unmute
-isNavItem: true
+isNavItem: false
+isAppPage: true
 use_card: false
 ---
 

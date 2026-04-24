@@ -3,7 +3,8 @@ layout: page
 title: ThisDay
 permalink: /thisday/
 icon: octicon-calendar
-isNavItem: true
+isNavItem: false
+isAppPage: true
 use_card: false
 ---
 
