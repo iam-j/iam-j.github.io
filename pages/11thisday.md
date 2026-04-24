@@ -284,7 +284,7 @@ use_card: false
   <div class="thisday-hero-eyebrow">For iPhone · iPad · Widgets</div>
   <h1>What happened on this day, every year you've had a camera.</h1>
   <p>A calmer way to revisit your past. Just today's date, across every year. No slideshows. No soundtracks. No AI. All on your device.</p>
-  <a class="thisday-cta" href="https://apps.apple.com/app/thisday/id6753014959" target="_blank">
+  <a class="thisday-cta" href="https://apps.apple.com/app/thisday-photo-memories/id6761721260" target="_blank">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
     Download on the App Store
   </a>
@@ -416,7 +416,7 @@ use_card: false
 <section class="thisday-final">
   <h2>Who it's for</h2>
   <p>People with a camera roll older than their current phone. People who want to revisit their past without an algorithm curating it for them. People who'd rather subtract than add.</p>
-  <a class="thisday-cta" href="https://apps.apple.com/app/thisday/id6753014959" target="_blank">
+  <a class="thisday-cta" href="https://apps.apple.com/app/thisday-photo-memories/id6761721260" target="_blank">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
     Get ThisDay on the App Store
   </a>
