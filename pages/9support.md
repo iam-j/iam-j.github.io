@@ -62,6 +62,18 @@ use_card: false
   margin-top: 0;
   font-size: 1.1rem;
 }
+.coming-soon-pill {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background: #e8f0fe;
+  color: #0e4e86;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
 </style>
 
 ## My Apps
@@ -116,6 +128,17 @@ use_card: false
     </div>
   </div>
   <img class="app-screenshot" src="{{ '/apps/readio.png' | prepend: site.imgrepo }}" alt="Readio - Listen to the Web screenshot">
+</div>
+
+<div class="app-card">
+  <div class="app-card-header">
+    <div class="app-info">
+      <h3>Junk Drawer</h3>
+      <p>Every iPhone has a thousand screenshots. Most are garbage. A few are gold — the parking spot, the OTP, the auto-rickshaw driver's address, the prescription, the kid's exam result. The problem isn't saving them — Photos already does that. The problem is finding them. Junk Drawer is a parallel index over your Screenshots album that runs entirely on your device. Share a screenshot to it (or let it auto-import) and it does the work.</p>
+      <span class="coming-soon-pill">Coming Soon</span>
+    </div>
+  </div>
+  <img class="app-screenshot" src="{{ '/apps/junkdrawer.png' | prepend: site.imgrepo }}" alt="Junk Drawer screenshot">
 </div>
 
 ---
