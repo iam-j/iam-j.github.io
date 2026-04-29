@@ -133,9 +133,12 @@ use_card: false
 <div class="app-card">
   <div class="app-card-header">
     <div class="app-info">
-      <h3>Junk Drawer</h3>
-      <p>Every iPhone has a thousand screenshots. Most are garbage. A few are gold — the parking spot, the OTP, the auto-rickshaw driver's address, the prescription, the kid's exam result. The problem isn't saving them — Photos already does that. The problem is finding them. Junk Drawer is a parallel index over your Screenshots album that runs entirely on your device. Share a screenshot to it (or let it auto-import) and it does the work.</p>
-      <span class="coming-soon-pill">Coming Soon</span>
+      <h3>JunkDrawer - Recall</h3>
+      <p>Every iPhone has a thousand screenshots. Most are garbage. A few are gold — the parking spot, the OTP, the auto-rickshaw driver's address, the prescription, the kid's exam result. The problem isn't saving them — Photos already does that. The problem is finding them. JunkDrawer is a parallel index over your Screenshots album that runs entirely on your device. Share a screenshot to it (or let it auto-import) and it does the work.</p>
+      <p><a href="{{ '/junkdrawer/' | relative_url }}">Read more about JunkDrawer →</a></p>
+      <a class="app-badge" href="https://apps.apple.com/app/junkdrawer-recall/id6763790180" target="_blank">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+      </a>
     </div>
   </div>
   <img class="app-screenshot" src="{{ '/apps/junkdrawer.png' | prepend: site.imgrepo }}" alt="Junk Drawer screenshot">
