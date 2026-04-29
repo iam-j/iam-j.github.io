@@ -11,7 +11,7 @@ use_card: false
 <style>
   /* ===== Readio landing page ===== */
   .readio-hero {
-    background: linear-gradient(135deg, #0e4e86 0%, #1a6bb5 100%);
+    background: linear-gradient(135deg, #b91c1c 0%, #dc2626 50%, #ef4444 100%);
     color: #fff;
     padding: 4.5rem 2rem 5rem;
     border-radius: 24px;
@@ -56,7 +56,7 @@ use_card: false
     align-items: center;
     gap: 0.5rem;
     background: #fff;
-    color: #0e4e86;
+    color: #b91c1c;
     padding: 0.85rem 1.75rem;
     border-radius: 100px;
     font-weight: 600;
@@ -67,7 +67,7 @@ use_card: false
   .readio-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    color: #0e4e86;
+    color: #b91c1c;
     text-decoration: none;
   }
 
@@ -80,7 +80,7 @@ use_card: false
     color: #374151;
   }
   .readio-intro p { margin-bottom: 1.25rem; }
-  .readio-intro strong { color: #0e4e86; font-weight: 700; }
+  .readio-intro strong { color: #b91c1c; font-weight: 700; }
 
   /* Feature rows - alternating two-column */
   .readio-feature {
@@ -106,8 +106,8 @@ use_card: false
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 700;
-    color: #0e4e86;
-    background: #e8f0fe;
+    color: #b91c1c;
+    background: #fee2e2;
     padding: 4px 12px;
     border-radius: 100px;
     margin-bottom: 0.75rem;
@@ -130,7 +130,7 @@ use_card: false
     box-shadow: none !important;
     background: transparent;
     overflow: visible;
-    filter: drop-shadow(0 20px 30px rgba(14,78,134,0.18)) drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+    filter: drop-shadow(0 20px 30px rgba(185,28,28,0.18)) drop-shadow(0 4px 8px rgba(0,0,0,0.08));
     transition: transform 0.3s ease;
   }
   .readio-feature-visual img:hover { transform: translateY(-4px); }
@@ -146,7 +146,7 @@ use_card: false
     box-shadow: none !important;
     background: transparent;
     overflow: visible;
-    filter: drop-shadow(0 12px 24px rgba(14,78,134,0.15));
+    filter: drop-shadow(0 12px 24px rgba(185,28,28,0.15));
   }
 
   /* Privacy / what it doesn't do - grid of cards */
@@ -164,7 +164,7 @@ use_card: false
     color: #1a1a1a;
     margin: 0 0 2rem;
   }
-  .readio-privacy h2 em { color: #0e4e86; font-style: normal; }
+  .readio-privacy h2 em { color: #b91c1c; font-style: normal; }
   .readio-privacy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -178,7 +178,7 @@ use_card: false
   }
   .readio-privacy-item strong {
     display: block;
-    color: #0e4e86;
+    color: #b91c1c;
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
@@ -264,7 +264,7 @@ use_card: false
     <span class="readio-feature-eyebrow">Now Playing</span>
     <h2>A player that respects the source</h2>
     <p>Big artwork pulled from the article's OG image. Title, source, scrubbable progress. Speed chip (0.5× through 2×), voice chip (pick any Siri voice - including the premium neural voices most apps hide), and a reader chip to flip to the text mid-listen.</p>
-    <p>Lock screen, Control Center, AirPods squeeze, CarPlay - everything just works, because Readio routes through the same <code style="background:#e8f0fe;color:#0e4e86;padding:2px 8px;border-radius:6px;font-size:0.9em;">MPNowPlayingInfoCenter</code> plumbing Apple Music uses.</p>
+    <p>Lock screen, Control Center, AirPods squeeze, CarPlay - everything just works, because Readio routes through the same <code style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:6px;font-size:0.9em;">MPNowPlayingInfoCenter</code> plumbing Apple Music uses.</p>
   </div>
   <div class="readio-feature-visual">
     <img src="{{ '/static/img/readio/nowplaying.png' | relative_url }}" alt="Readio now playing screen">

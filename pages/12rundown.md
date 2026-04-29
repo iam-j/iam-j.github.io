@@ -10,8 +10,9 @@ use_card: false
 
 <style>
   /* ===== RunDown landing page ===== */
+  /* Brand: dark charcoal app with orange accent (#f97316) */
   .rundown-hero {
-    background: linear-gradient(135deg, #0e4e86 0%, #1a6bb5 100%);
+    background: linear-gradient(135deg, #0c0a09 0%, #1c1917 50%, #292524 100%);
     color: #fff;
     padding: 4.5rem 2rem 5rem;
     border-radius: 24px;
@@ -24,17 +25,22 @@ use_card: false
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
+    background: radial-gradient(circle at 18% 22%, rgba(249,115,22,0.22) 0%, transparent 45%),
+                radial-gradient(circle at 82% 78%, rgba(249,115,22,0.12) 0%, transparent 50%);
   }
   .rundown-hero > * { position: relative; z-index: 1; }
   .rundown-hero-eyebrow {
-    font-size: 0.8rem;
+    display: inline-block;
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
-    font-weight: 600;
-    opacity: 0.85;
-    margin-bottom: 1rem;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    color: #fdba74;
+    background: rgba(249,115,22,0.14);
+    border: 1px solid rgba(249,115,22,0.3);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 1.25rem;
   }
   .rundown-hero h1 {
     font-size: 3rem;
@@ -49,26 +55,28 @@ use_card: false
     line-height: 1.6;
     max-width: 640px;
     margin: 0 auto 2rem;
-    opacity: 0.95;
+    color: #d6d3d1;
   }
   .rundown-cta {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: #fff;
-    color: #0e4e86;
+    background: #f97316;
+    color: #fff;
     padding: 0.85rem 1.75rem;
     border-radius: 100px;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 24px rgba(249,115,22,0.35);
   }
   .rundown-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    color: #0e4e86;
+    box-shadow: 0 12px 28px rgba(249,115,22,0.45);
+    color: #fff;
     text-decoration: none;
+    background: #ea580c;
   }
 
   /* Intro story */
@@ -80,7 +88,7 @@ use_card: false
     color: #374151;
   }
   .rundown-intro p { margin-bottom: 1.25rem; }
-  .rundown-intro strong { color: #0e4e86; font-weight: 700; }
+  .rundown-intro strong { color: #c2410c; font-weight: 700; }
 
   /* Feature rows */
   .rundown-feature {
@@ -106,8 +114,8 @@ use_card: false
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 700;
-    color: #0e4e86;
-    background: #e8f0fe;
+    color: #c2410c;
+    background: #ffedd5;
     padding: 4px 12px;
     border-radius: 100px;
     margin-bottom: 0.75rem;
@@ -130,7 +138,7 @@ use_card: false
     box-shadow: none !important;
     background: transparent;
     overflow: visible;
-    filter: drop-shadow(0 20px 30px rgba(14,78,134,0.18)) drop-shadow(0 4px 8px rgba(0,0,0,0.08));
+    filter: drop-shadow(0 20px 30px rgba(28,25,23,0.25)) drop-shadow(0 4px 8px rgba(249,115,22,0.12));
     transition: transform 0.3s ease;
   }
   .rundown-feature-visual img:hover { transform: translateY(-4px); }
@@ -146,7 +154,7 @@ use_card: false
     box-shadow: none !important;
     background: transparent;
     overflow: visible;
-    filter: drop-shadow(0 12px 24px rgba(14,78,134,0.15));
+    filter: drop-shadow(0 12px 24px rgba(28,25,23,0.2));
   }
 
   /* Privacy / what it doesn't do */
@@ -164,7 +172,7 @@ use_card: false
     color: #1a1a1a;
     margin: 0 0 2rem;
   }
-  .rundown-privacy h2 em { color: #0e4e86; font-style: normal; }
+  .rundown-privacy h2 em { color: #c2410c; font-style: normal; }
   .rundown-privacy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -178,7 +186,7 @@ use_card: false
   }
   .rundown-privacy-item strong {
     display: block;
-    color: #0e4e86;
+    color: #c2410c;
     font-size: 1.05rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
