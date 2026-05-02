@@ -15,7 +15,7 @@ use_card: false
 <style>
   /* ===== Junk Drawer landing page ===== */
   /* Deviates from the site's blue palette to match the app's
-     warm-paper aesthetic — same screenshots, same identity, in
+     warm-paper aesthetic - same screenshots, same identity, in
      the page chrome too. Inter still does the body work; Fraunces
      handles the italic "drawer" pulls and large display moments. */
 
@@ -128,7 +128,7 @@ use_card: false
     font-weight: 500;
   }
 
-  /* Feature rows — alternating two-column */
+  /* Feature rows - alternating two-column */
   .jd-feature {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,7 +223,7 @@ use_card: false
   }
   .jd-quote em { color: var(--jd-accent); }
 
-  /* Privacy / what it doesn't do — grid of cards */
+  /* Privacy / what it doesn't do - grid of cards */
   .jd-privacy {
     background: var(--jd-paper-dim);
     border-radius: 24px;
@@ -324,17 +324,17 @@ use_card: false
 </section>
 
 <div class="jd-intro">
-  <p>Every iPhone has a thousand screenshots. Most are garbage. A few are gold — the parking spot you took at the airport, the OTP from the bank you never quite memorized, the auto driver's address scrawled on a note your friend texted, the kid's exam result you sent your spouse and immediately lost.</p>
+  <p>Every iPhone has a thousand screenshots. Most are garbage. A few are gold - the parking spot you took at the airport, the OTP from the bank you never quite memorized, the auto driver's address scrawled on a note your friend texted, the kid's exam result you sent your spouse and immediately lost.</p>
   <p>The problem isn't saving them. Photos already does that. The problem is <em>finding them</em>. Three months later, when you actually need that prescription, you scroll through a thousand thumbnails of memes, restaurant bills, and accidental lock-screens, and you still can't find it.</p>
-  <p>So I built <strong>Junk Drawer</strong> — a parallel index over your Screenshots album that runs entirely on your device. Share a screenshot to it (or let it auto-import) and it does the work: OCRs the text, classifies what it is, writes a one-line summary, and pulls out the bits you'll actually act on.</p>
-  <p>No account. No cloud. No analytics. Built by one person, on a Mac mini in Hyderabad, because nothing else solved my own pile.</p>
+  <p>So I built <strong>Junk Drawer</strong> - a parallel index over your Screenshots album that runs entirely on your device. Share a screenshot to it (or let it auto-import) and it does the work: OCRs the text, classifies what it is, writes a one-line summary, and pulls out the bits you'll actually act on.</p>
+  <p>No account. No cloud. No analytics. Built by one person, because nothing else solved my own pile.</p>
 </div>
 
 <section class="jd-feature">
   <div class="jd-feature-text">
     <span class="jd-feature-eyebrow">The Drawer</span>
     <h2>Everything you've thrown in, in <em>one drawer.</em></h2>
-    <p>The home screen is the drawer itself — every screenshot you've fed it, in capture-date order. Filter by kind from the chip strip on top: receipts, prescriptions, tickets, contacts, payments, more. A small accent dot tells you which screenshots are still being analyzed. No fake completeness.</p>
+    <p>The home screen is the drawer itself - every screenshot you've fed it, in capture-date order. Filter by kind from the chip strip on top: receipts, prescriptions, tickets, contacts, payments, more. A small accent dot tells you which screenshots are still being analyzed. No fake completeness.</p>
     <p>Tap any thumbnail for the full picture: the OCR text, the AI's one-line summary, the structured fields, every entity pill. Long-press to enter selection mode and bulk-archive or bulk-delete.</p>
   </div>
   <div class="jd-feature-visual">
@@ -346,7 +346,7 @@ use_card: false
   <div class="jd-feature-text">
     <span class="jd-feature-eyebrow">Analysis</span>
     <h2>What's in this screenshot, in <em>seconds.</em></h2>
-    <p>Apple Intelligence reads the screenshot like a person would. It tells you what kind of thing it is, writes a one-line summary so you can skim a hundred screenshots without opening any, and surfaces the structured bits — phone numbers, OTPs, ₹ amounts, dates, addresses, UPI handles, IFSC codes, dosages, tracking numbers — as tappable pills.</p>
+    <p>Apple Intelligence reads the screenshot like a person would. It tells you what kind of thing it is, writes a one-line summary so you can skim a hundred screenshots without opening any, and surfaces the structured bits - phone numbers, OTPs, ₹ amounts, dates, addresses, UPI handles, IFSC codes, dosages, tracking numbers - as tappable pills.</p>
     <p>One tap to call the number, copy the OTP, open the address in Maps, copy the total. The information was always sitting in your screenshot. We just made it cost zero seconds to use.</p>
   </div>
   <div class="jd-feature-visual">
@@ -357,7 +357,7 @@ use_card: false
 <section class="jd-feature">
   <div class="jd-feature-text">
     <span class="jd-feature-eyebrow">Different Shapes</span>
-    <h2>Bills, prescriptions, exam results — <em>all parsed.</em></h2>
+    <h2>Bills, prescriptions, exam results - <em>all parsed.</em></h2>
     <p>A pizza bill becomes a merchant + total + line items. A prescription becomes drug + dosage + prescriber + date. A board exam result becomes the candidate + assessment + scores per subject. Same drawer, same search, different structured output for each shape.</p>
     <p>Domain-aware where it matters. ₹ amounts format in lakhs and crores when they should. UPI handles aren't treated as broken email addresses. Phone numbers in <code>+91</code> format pretty-print correctly without you doing anything.</p>
   </div>
@@ -370,14 +370,14 @@ use_card: false
 </section>
 
 <div class="jd-quote">
-  <p>"Type <em>biryani</em> and find that Swiggy bill. Type <em>₹440</em> and find the receipt. Type <em>diabetes meds</em> and find the prescription that says Metformin — without ever using the word 'diabetes'."</p>
+  <p>"Type <em>biryani</em> and find that Swiggy bill. Type <em>₹440</em> and find the receipt. Type <em>diabetes meds</em> and find the prescription that says Metformin - without ever using the word 'diabetes'."</p>
 </div>
 
 <section class="jd-feature reverse">
   <div class="jd-feature-text">
     <span class="jd-feature-eyebrow">Search</span>
     <h2>Search that actually <em>understands.</em></h2>
-    <p>Three layers, one query. Full-text matches words inside the image. Semantic matches the meaning, using on-device sentence embeddings. Visual labels match what the image looks like — type "bird" and find the bird photo with no caption at all.</p>
+    <p>Three layers, one query. Full-text matches words inside the image. Semantic matches the meaning, using on-device sentence embeddings. Visual labels match what the image looks like - type "bird" and find the bird photo with no caption at all.</p>
     <p>You don't pick a mode. You just type. Type a merchant, a doctor's name, a part number, an amount, the vibe of what you remember. The right screenshot surfaces.</p>
   </div>
   <div class="jd-feature-visual">
@@ -389,8 +389,8 @@ use_card: false
   <div class="jd-feature-text">
     <span class="jd-feature-eyebrow">Get Stuff In</span>
     <h2>Share sheet, or auto-import. <em>Your call.</em></h2>
-    <p>From anywhere — Photos, a website, a chat, a screenshot you just took — tap Share → Junk Drawer. Bottom sheet shows what we found, you tap "Dump it", done. Bulk shares of 30 photos work the same way.</p>
-    <p>Or grant Photos permission once and let auto-import do its thing — every new screenshot gets indexed quietly in the background. Either path. Both paths. Whatever fits.</p>
+    <p>From anywhere - Photos, a website, a chat, a screenshot you just took - tap Share → Junk Drawer. Bottom sheet shows what we found, you tap "Dump it", done. Bulk shares of 30 photos work the same way.</p>
+    <p>Or grant Photos permission once and let auto-import do its thing - every new screenshot gets indexed quietly in the background. Either path. Both paths. Whatever fits.</p>
   </div>
   <div class="jd-feature-visual">
     <img src="{{ '/static/img/junkdrawer/autoimportscreenshots_framed.png' | relative_url }}" alt="Junk Drawer's auto-import setting">
@@ -402,7 +402,7 @@ use_card: false
     <span class="jd-feature-eyebrow">Settings</span>
     <h2>Honest about what's <em>actually running.</em></h2>
     <p>Apple Intelligence has cold-start latency, isn't on every device, and can be turned off in Settings. Junk Drawer doesn't lie about any of this. The Settings panel tells you exactly which features are running, which aren't, and how to fix it.</p>
-    <p>If iCloud Backup is on, your drawer rides to your next iPhone automatically. If you'd rather not trust that, manual export creates a single <code>.junkdrawer</code> file you can stash anywhere — iCloud Drive, AirDrop to your Mac, email yourself. Tap one to import on a fresh install.</p>
+    <p>If iCloud Backup is on, your drawer rides to your next iPhone automatically. If you'd rather not trust that, manual export creates a single <code>.junkdrawer</code> file you can stash anywhere - iCloud Drive, AirDrop to your Mac, email yourself. Tap one to import on a fresh install.</p>
   </div>
   <div class="jd-feature-visual">
     <img src="{{ '/static/img/junkdrawer/settingsscreen_framed.png' | relative_url }}" alt="Junk Drawer's settings panel">
@@ -457,4 +457,4 @@ use_card: false
   <span class="jd-cta-meta">Free, with an optional tip jar inside</span>
 </section>
 
-<p class="jd-colophon">Built by <a href="{{ '/about/' | relative_url }}">J</a> — Swift 6, SwiftUI, GRDB, Apple Foundation Models, Vision, Natural Language. Designed in warm paper because the rest of iOS is already so cold.</p>
+<p class="jd-colophon">Built by <a href="{{ '/about/' | relative_url }}">J</a> - Swift 6, SwiftUI, GRDB, Apple Foundation Models, Vision, Natural Language. Designed in warm paper because the rest of iOS is already so cold.</p>
