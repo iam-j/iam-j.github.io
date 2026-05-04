@@ -442,7 +442,7 @@ use_card: false
     </div>
     <div class="jd-privacy-item">
       <strong>No Photos copy</strong>
-      <span>Your library stays where it is. Delete the app, the index goes with it. Photos untouched.</span>
+      <span>Your library stays where it is. Delete the app, the index goes with it. Photos is only ever touched if you opt in to "delete from Photos" on a specific screenshot.</span>
     </div>
   </div>
 </section>
