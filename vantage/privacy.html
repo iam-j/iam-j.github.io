@@ -1,0 +1,174 @@
+---
+layout: null
+permalink: /vantage/privacy/
+sitemap: false
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Vantage</title>
+<style>
+  :root {
+    --ink: #0a0a0a;
+    --ink-soft: #15161a;
+    --ink-card: #1a1c20;
+    --line: #2a2c30;
+    --paper: #f2e9d6;
+    --bone: #e8dec5;
+    --bone-soft: #d4cab6;
+    --muted: #8a8275;
+    --gold: #c9a86a;
+    --rust: #b46a3d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+  header { margin-bottom: 48px; }
+  .brand {
+    font-family: "Iowan Old Style", "Palatino", Georgia, serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  h1 {
+    font-family: "Iowan Old Style", "Palatino", Georgia, serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.15;
+    color: var(--paper);
+    margin-bottom: 8px;
+  }
+  h1 .accent { color: var(--gold); font-style: italic; }
+  .meta {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  h2 {
+    font-family: "Iowan Old Style", "Palatino", Georgia, serif;
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--paper);
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+  h2 .dot { color: var(--gold); }
+  p {
+    color: var(--bone-soft);
+    margin-bottom: 14px;
+  }
+  strong { color: var(--paper); font-weight: 600; }
+  ul {
+    list-style: none;
+    margin-bottom: 14px;
+  }
+  ul li {
+    color: var(--bone-soft);
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+  a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(201, 168, 106, 0.4);
+  }
+  a:hover { border-bottom-color: var(--gold); }
+  .callout {
+    background: var(--ink-card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin: 24px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+  footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  footer a { color: var(--bone-soft); border-bottom: none; }
+  footer a:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Vantage</div>
+  <h1>Privacy <span class="accent">policy.</span></h1>
+  <div class="meta">Last updated · 10 May 2026</div>
+</header>
+
+<section class="callout">
+  <p><strong>Short version:</strong> Vantage doesn't collect, transmit, sell, share, or store any personal data on any server. Everything stays on your iPhone.</p>
+</section>
+
+<h2>What we collect<span class="dot">.</span></h2>
+<p>Nothing. There is no analytics SDK, no crash reporter, no advertising framework, no remote configuration, no cloud API, and no account system. Vantage has never sent a single byte of your data to any server, including ours, because there is no server.</p>
+
+<h2>What stays on your device<span class="dot">.</span></h2>
+<p>The following is written to Vantage's app sandbox on your iPhone and only your iPhone:</p>
+<ul>
+  <li>Captures, thumbnails, subject masks, composites, and time-lapse exports</li>
+  <li>Spot names and capture timestamps</li>
+  <li>Alignment data (computed by Apple's Vision framework on-device)</li>
+  <li>If you grant location permission, a single GPS coordinate per spot for sunrise / sunset times</li>
+</ul>
+<p>When you delete a spot or uninstall Vantage, this data is deleted with it. There is no backup or copy anywhere else.</p>
+
+<h2>Permissions<span class="dot">.</span></h2>
+<ul>
+  <li><strong>Camera</strong> &mdash; required to take photos.</li>
+  <li><strong>Photos</strong> &mdash; only used when you tap Save on a composite or time-lapse, so the file can be added to your library.</li>
+  <li><strong>Location (When In Use)</strong> &mdash; optional. Used once per first capture to pin a spot, and to compute the day's sunrise and sunset times for the spot detail screen. The coordinate is stored locally and never transmitted.</li>
+</ul>
+<p>You can revoke any of these in iOS Settings &rarr; Privacy &rarr; Camera / Photos / Location Services. Vantage degrades gracefully when permissions are off.</p>
+
+<h2>Third-party services<span class="dot">.</span></h2>
+<p>None. Vantage uses no analytics SDKs, no crash reporters, no advertising frameworks, no remote configuration, no cloud APIs.</p>
+
+<h2>In-app purchase<span class="dot">.</span></h2>
+<p>Vantage Pro is a one-time purchase that removes the corner watermark from exported composites. Apple processes the transaction; we receive a receipt confirming the purchase, but no personal information about you. The purchase is restored automatically on a fresh install once you sign in to the same Apple ID.</p>
+
+<h2>Children<span class="dot">.</span></h2>
+<p>Vantage does not knowingly collect data from anyone, including children under 13. There is no account system and no data leaves the device.</p>
+
+<h2>Changes<span class="dot">.</span></h2>
+<p>If a future version of Vantage ever collects or transmits data, this policy will be updated and clearly described in the corresponding "What's New" notes before the change ships. By default, the app stays local-only.</p>
+
+<footer>
+  Vantage &middot; One spot. Many moments. Stitched into a single frame.
+</footer>
+
+</body>
+</html>
