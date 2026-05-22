@@ -292,12 +292,13 @@ use_card: false
 </style>
 
 <section class="vantage-hero">
-  <div class="vantage-hero-eyebrow">For iPhone · iOS 18+</div>
+  <div class="vantage-hero-eyebrow">For iPhone · iOS 26+</div>
   <h1>Repeat photography, <em>stitched.</em></h1>
   <p>Pick a fixed subject. Photograph it again across hours, days, or seasons. Vantage stitches your captures into a single frame - wedges, grids, strips, crossfades, sliders, or a short time-lapse movie.</p>
-  <a class="vantage-cta disabled" aria-disabled="true">
+  <!-- TODO: swap href with the live App Store URL: https://apps.apple.com/app/vantage/id<APP_ID> -->
+  <a class="vantage-cta" href="#APP_STORE_URL" target="_blank" rel="noopener">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-    Coming soon to the App Store
+    Download on the App Store
   </a>
 </section>
 
@@ -409,10 +410,11 @@ use_card: false
 <section class="vantage-final">
   <h2>Who it's <em>for</em></h2>
   <p>People who keep returning to a place - a tree, a doorway, a horizon, a single corner of a single building - and have always wished they could see all those visits in a single frame. The trip you take every year. The construction project across the street. The window that catches different light every morning.</p>
-  <a class="vantage-cta disabled" aria-disabled="true">
+  <!-- TODO: swap href with the live App Store URL -->
+  <a class="vantage-cta" href="#APP_STORE_URL" target="_blank" rel="noopener">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-    Coming soon to the App Store
+    Get Vantage on the App Store
   </a>
 </section>
 
-<p class="vantage-colophon">Built by <a href="{{ '/about/' | relative_url }}">J</a> - Swift 6, SwiftUI, SwiftData, Vision, AVFoundation. Zero third-party dependencies.</p>
+<p class="vantage-colophon">Built by <a href="{{ '/about/' | relative_url }}">J</a> - Swift 6, SwiftUI, SwiftData, Vision, AVFoundation. Zero third-party dependencies. <a href="{{ '/vantage/privacy/' | relative_url }}">Privacy policy</a>.</p>

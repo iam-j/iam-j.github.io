@@ -149,6 +149,61 @@ use_card: false
     filter: drop-shadow(0 12px 24px rgba(124,45,18,0.18));
   }
 
+  /* "New in 2.3" highlight banner — text-only single-column callout */
+  .thisday-highlight {
+    background: linear-gradient(135deg, #fff8f3 0%, #fff1e6 100%);
+    border: 1px solid #ffd5b0;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    margin-bottom: 4.5rem;
+    text-align: left;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .thisday-highlight-eyebrow {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    color: #c2410c;
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 1rem;
+    border: 1px solid #ffd5b0;
+  }
+  .thisday-highlight h2 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+    margin: 0 0 1rem;
+    line-height: 1.25;
+  }
+  .thisday-highlight p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0 0 0.9rem;
+  }
+  .thisday-highlight-formats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .thisday-highlight-formats span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7c2d12;
+    background: #fff;
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid #ffd5b0;
+  }
+
   /* Missing-in-other-apps grid */
   .thisday-gap {
     background: #fff8f3;
@@ -276,7 +331,8 @@ use_card: false
     .thisday-feature.reverse .thisday-feature-text { order: 2; }
     .thisday-feature.reverse .thisday-feature-visual { order: 1; }
     .thisday-feature-text h2 { font-size: 1.5rem; }
-    .thisday-gap, .thisday-privacy { padding: 2rem 1.5rem; border-radius: 16px; }
+    .thisday-gap, .thisday-privacy, .thisday-highlight { padding: 2rem 1.5rem; border-radius: 16px; }
+    .thisday-highlight h2 { font-size: 1.5rem; }
   }
 </style>
 
@@ -293,7 +349,7 @@ use_card: false
 <div class="thisday-intro">
   <p>Apple's Memories is a miracle of engineering that almost nobody loves. It picks your photos for you, wraps them in a Ken Burns slideshow, plays a soundtrack you didn't choose, and every few months surfaces a photo of someone you'd rather not be reminded about. There's no way to say "just give me the pictures from this date - and only the ones I want."</p>
   <p>Google Photos does the same thing with more machine learning. Timehop does it with ads and a login. Every app in the category <strong>adds</strong> when what you actually want is <strong>subtraction</strong>.</p>
-  <p>So I built <strong>ThisDay</strong> - the memories app I wish had already existed. Open it, see exactly what happened on today's date across every year. Hide a date. Skip a photo. Turn off screenshots. That's it.</p>
+  <p>So I built <strong>ThisDay</strong> - the memories app I wish had already existed. Open it, see exactly what happened on today's date across every year. Hide a date. Skip a photo. Turn off screenshots. Compose a Live Photo collage of years past and share it. That's it.</p>
 </div>
 
 <section class="thisday-feature">
@@ -356,6 +412,19 @@ use_card: false
   </div>
 </section>
 
+<section class="thisday-highlight">
+  <span class="thisday-highlight-eyebrow">New in 2.3 · Memory Collage</span>
+  <h2>A shareable Live Photo of your memories</h2>
+  <p>Compose a Live Photo or video from your memories on this day across years. Pick a format — Phone / Stories, Square, Portrait, or Landscape — and a grid layout. ThisDay stitches it together with each tile playing its source motion, an editorial date stamp, and a subtle app mark in the corner.</p>
+  <p>Share to Instagram, TikTok, or Messages as a clean MP4. Save to Photos as a real Live Photo that plays on long-press. iOS still gates Motion wallpapers to camera-originated captures — we don't pretend otherwise — but the artifact itself is unique to ThisDay. Nothing else generates this.</p>
+  <div class="thisday-highlight-formats">
+    <span>9:16 Phone / Stories / Reels</span>
+    <span>1:1 Instagram Square</span>
+    <span>4:5 Instagram Portrait</span>
+    <span>16:9 Landscape / YouTube</span>
+  </div>
+</section>
+
 <section class="thisday-gap">
   <h2>Things the big apps <em>still</em> won't do</h2>
   <p class="thisday-gap-sub">Every one of these is a top complaint about Apple Memories and Google Photos. ThisDay ships them as defaults.</p>
@@ -377,8 +446,8 @@ use_card: false
       <span>No music, no Ken Burns, no forced storytelling. Your photos, as photos.</span>
     </div>
     <div class="thisday-gap-item">
-      <strong>Gap years, quietly</strong>
-      <span>Years with no photos still exist. ThisDay lists them without drama instead of pretending they never happened.</span>
+      <strong>Memory Collage</strong>
+      <span>Compose a Live Photo of your years past, share it as a clean MP4. No big-app equivalent exists.</span>
     </div>
     <div class="thisday-gap-item">
       <strong>A real "Today" button</strong>
