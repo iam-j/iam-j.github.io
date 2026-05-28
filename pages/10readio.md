@@ -244,7 +244,7 @@ use_card: false
 <div class="readio-intro">
   <p>I read a lot online. Long essays, research papers, deep-dive blog posts I bookmarked and never got back to. I <em>also</em> spend a lot of time doing things where I can't look at a screen - commuting, cooking, walking, at the gym.</p>
   <p>Every text-to-speech app I tried wanted a subscription, needed an account, shipped my articles to somebody's cloud TTS, or buried the one feature I cared about under three paywalls. Safari's "Listen to Page" works but has no queue, no playlists, no resume, no speed memory, and forgets everything the moment you close the tab.</p>
-  <p>So I built <strong>Readio</strong> - the app I wish had already existed. Built on Apple's on-device speech engine. No backend. No account. No subscription.</p>
+  <p>So I built <strong>Readio</strong> - the app I wish had already existed. Articles, PDFs, EPUBs, RSS feeds - whatever you read, on whatever device you read it on, narrated by Apple's on-device speech engine. No backend. No account. No subscription.</p>
 </div>
 
 <section class="readio-feature">
@@ -253,6 +253,7 @@ use_card: false
     <h2>Your articles, as a listening library</h2>
     <p>The home screen borrows from something that already works: Apple Music. Articles are tracks, playlists are playlists, and the stuff you added yesterday sits right where you'd expect "Recently Added" to sit.</p>
     <p>No new mental model - you already know how this works. Swipe to delete, drag to reorder, tap to listen. That's it.</p>
+    <p>A <strong>Continue Listening</strong> carousel sits at the top and quietly remembers every article you started but didn't finish, so you never lose your place across long commutes, busy weeks, or accidental restarts.</p>
   </div>
   <div class="readio-feature-visual">
     <img src="{{ '/static/img/readio/library.png' | relative_url }}" alt="Readio library view">
@@ -264,7 +265,8 @@ use_card: false
     <span class="readio-feature-eyebrow">Now Playing</span>
     <h2>A player that respects the source</h2>
     <p>Big artwork pulled from the article's OG image. Title, source, scrubbable progress. Speed chip (0.5× through 2×), voice chip (pick any Siri voice - including the premium neural voices most apps hide), and a reader chip to flip to the text mid-listen.</p>
-    <p>Lock screen, Control Center, AirPods squeeze, CarPlay - everything just works, because Readio routes through the same <code style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:6px;font-size:0.9em;">MPNowPlayingInfoCenter</code> plumbing Apple Music uses.</p>
+    <p>Lock screen, Control Center, AirPods squeeze, CarPlay - everything just works, because Readio routes through the same <code style="background:#fee2e2;color:#b91c1c;padding:2px 8px;border-radius:6px;font-size:0.9em;">MPNowPlayingInfoCenter</code> plumbing Apple Music uses. Articles render to disk in the background so wireless playback in the car runs from a real audio file - none of the cold-start stutter most TTS apps have over Bluetooth.</p>
+    <p>Auto-advance works the way long-form audio should: let an article finish and the next one in your queue resumes from where you left it. Tap Skip Next when you want to start fresh. The two intents stay distinct - the way Overcast and Apple Podcasts handle it, not the way Music does.</p>
   </div>
   <div class="readio-feature-visual">
     <img src="{{ '/static/img/readio/nowplaying.png' | relative_url }}" alt="Readio now playing screen">
@@ -300,13 +302,25 @@ use_card: false
 
 <section class="readio-feature">
   <div class="readio-feature-text">
+    <span class="readio-feature-eyebrow">Smart Playlists</span>
+    <h2>Auto-curated, or roll your own</h2>
+    <p>Five built-in views that update themselves: <strong>Today</strong>, <strong>Quick Listens</strong> (under 10 min), <strong>Long Reads</strong> (20+ min), <strong>Recently Played</strong>, and <strong>Unstarted</strong>. Time-budget-driven browsing - "I have five minutes before this meeting" finds the right thing without you scrolling.</p>
+    <p>Build your own with a rule editor: by source, by length, by recency, combined any way you want. Or just describe what you want in plain English - Readio's on-device language model writes the rules for you. No API key, no cloud round-trip, no model file to download.</p>
+  </div>
+  <div class="readio-feature-visual">
+    <img src="{{ '/static/img/readio/smartplaylist_framed.png' | relative_url }}" alt="Readio smart playlist creation">
+  </div>
+</section>
+
+<section class="readio-feature reverse">
+  <div class="readio-feature-text">
     <span class="readio-feature-eyebrow">Share</span>
     <h2>Share a great line, instantly</h2>
-    <p>Hit a line that stuck with you? Tap a sentence, export a snapshot - the quote, the source, the Readio watermark - and send it to a friend.</p>
+    <p>Hit a line that stuck with you? Long-press to select, tap Share, and Readio renders a clean image of the quote with the source and a subtle watermark. Save it to Photos, send it to a friend, drop it in Notes - it's just an image, do what you want with it.</p>
     <p>It's the feature Spotify added to music and Kindle added to books. Articles deserved it too.</p>
   </div>
   <div class="readio-feature-visual">
-    <img src="{{ '/static/img/readio/snapshot.png' | relative_url }}" alt="Readio quote snapshot">
+    <img src="{{ '/static/img/readio/sharecard_framed.png' | relative_url }}" alt="Readio quote share card">
   </div>
 </section>
 
@@ -332,6 +346,14 @@ use_card: false
     <div class="readio-privacy-item">
       <strong>No cloud TTS bill</strong>
       <span>Readio uses Apple's on-device voices - free, private, and work on the subway with no signal.</span>
+    </div>
+    <div class="readio-privacy-item">
+      <strong>On-device AI</strong>
+      <span>The natural-language Smart Playlist rule helper runs on Apple's Foundation Models framework. No API key, no OpenAI bill, no prompt left your phone.</span>
+    </div>
+    <div class="readio-privacy-item">
+      <strong>iCloud sync, your way</strong>
+      <span>Library, playlists, and queue sync across your iPhone and iPad through your own iCloud - not a third-party server I run.</span>
     </div>
   </div>
 </section>

@@ -223,6 +223,74 @@ use_card: false
   }
   .jd-quote em { color: var(--jd-accent); }
 
+  /* Systems integration - card grid (v1.2) */
+  .jd-systems {
+    background: var(--jd-paper);
+    border: 1px solid var(--jd-rule);
+    border-radius: 24px;
+    padding: 3rem;
+    margin-bottom: 4.5rem;
+  }
+  .jd-systems-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .jd-systems-eyebrow {
+    display: inline-block;
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 600;
+    color: var(--jd-accent);
+    background: var(--jd-accent-soft);
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 0.85rem;
+  }
+  .jd-systems h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    color: var(--jd-ink);
+    margin: 0;
+    line-height: 1.2;
+  }
+  .jd-systems h2 em { color: var(--jd-accent); font-style: italic; }
+  .jd-systems-lead {
+    max-width: 560px;
+    margin: 0.75rem auto 0;
+    color: var(--jd-ink-soft);
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+  .jd-systems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .jd-systems-item {
+    background: var(--jd-card);
+    border: 1px solid var(--jd-rule);
+    border-radius: 16px;
+    padding: 1.5rem;
+  }
+  .jd-systems-item strong {
+    display: block;
+    color: var(--jd-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  .jd-systems-item span {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--jd-ink-soft);
+  }
+
   /* Privacy / what it doesn't do - grid of cards */
   .jd-privacy {
     background: var(--jd-paper-dim);
@@ -308,6 +376,8 @@ use_card: false
     .jd-quote { padding: 1.5rem 1.5rem; border-radius: 16px; }
     .jd-quote p { font-size: 1.15rem; }
     .jd-privacy { padding: 2rem 1.5rem; border-radius: 16px; }
+    .jd-systems { padding: 2rem 1.5rem; border-radius: 16px; }
+    .jd-systems h2 { font-size: 1.55rem; }
     .jd-final h2 { font-size: 1.55rem; }
   }
 </style>
@@ -389,11 +459,33 @@ use_card: false
   <div class="jd-feature-text">
     <span class="jd-feature-eyebrow">Get Stuff In</span>
     <h2>Share sheet, or auto-import. <em>Your call.</em></h2>
-    <p>From anywhere - Photos, a website, a chat, a screenshot you just took - tap Share → Junk Drawer. Bottom sheet shows what we found, you tap "Dump it", done. Bulk shares of 30 photos work the same way.</p>
+    <p>From anywhere - Photos, a website, a chat, a screenshot you just took - tap Share → Junk Drawer. Bottom sheet shows what we found, you tap "Dump it", done. Bulk shares of 30 photos work the same way. Share a <strong>URL</strong> from Safari and it lands as a saved link, searchable by host or title - same drawer, no separate bookmark manager.</p>
     <p>Or grant Photos permission once and let auto-import do its thing - every new screenshot gets indexed quietly in the background. Either path. Both paths. Whatever fits.</p>
   </div>
   <div class="jd-feature-visual">
     <img src="{{ '/static/img/junkdrawer/autoimportscreenshots_framed.png' | relative_url }}" alt="Junk Drawer's auto-import setting">
+  </div>
+</section>
+
+<section class="jd-systems">
+  <div class="jd-systems-header">
+    <span class="jd-systems-eyebrow">Lives where iOS already looks</span>
+    <h2>Find your drawer from <em>anywhere on iOS.</em></h2>
+    <p class="jd-systems-lead">Junk Drawer doesn't ask you to open it. Every screenshot you've thrown in shows up in the places iOS already searches.</p>
+  </div>
+  <div class="jd-systems-grid">
+    <div class="jd-systems-item">
+      <strong>Spotlight</strong>
+      <span>Swipe down on the home screen, type a word from a screenshot — the matching shot appears with its thumbnail. Tap to jump straight into Junk Drawer at that screenshot.</span>
+    </div>
+    <div class="jd-systems-item">
+      <strong>Siri &amp; Shortcuts</strong>
+      <span>Ask Siri to search Junk Drawer. Wire the Action Button to "Search JunkDrawer." Build a Shortcut that pulls a query result into another app. App Intents the way Apple intended.</span>
+    </div>
+    <div class="jd-systems-item">
+      <strong>Reminders</strong>
+      <span>"Remind me about this" on any screenshot or saved link. Pick Tomorrow 9am, Tonight 7pm, Saturday, a custom time, or just no time. The reminder fires with a deep link straight back to the screenshot.</span>
+    </div>
   </div>
 </section>
 
@@ -402,7 +494,7 @@ use_card: false
     <span class="jd-feature-eyebrow">Settings</span>
     <h2>Honest about what's <em>actually running.</em></h2>
     <p>Apple Intelligence has cold-start latency, isn't on every device, and can be turned off in Settings. Junk Drawer doesn't lie about any of this. The Settings panel tells you exactly which features are running, which aren't, and how to fix it.</p>
-    <p>If iCloud Backup is on, your drawer rides to your next iPhone automatically. If you'd rather not trust that, manual export creates a single <code>.junkdrawer</code> file you can stash anywhere - iCloud Drive, AirDrop to your Mac, email yourself. Tap one to import on a fresh install.</p>
+    <p>If iCloud Backup is on, your drawer rides to your next iPhone automatically — the local database and image cache are in Documents, so iOS already takes care of it. No separate sync surface to babysit.</p>
   </div>
   <div class="jd-feature-visual">
     <img src="{{ '/static/img/junkdrawer/settingsscreen_framed.png' | relative_url }}" alt="Junk Drawer's settings panel">

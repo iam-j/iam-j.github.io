@@ -264,6 +264,58 @@ use_card: false
     font-weight: 700;
   }
 
+  /* Card-grid for the "More than a tracker" section.
+     Same palette / radii as the privacy block, but the cards are
+     left-aligned and tighter to fit more items per row. */
+  .st-grid {
+    background: var(--st-paper-dim);
+    border-radius: 24px;
+    padding: 3rem;
+    margin-bottom: 4rem;
+  }
+  .st-grid h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--st-ink);
+    margin: 0 0 0.5rem;
+  }
+  .st-grid h2 em { color: var(--st-accent); font-style: italic; }
+  .st-grid > p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--st-ink-soft);
+  }
+  .st-grid-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .st-grid-item {
+    background: var(--st-card);
+    border: 1px solid var(--st-rule);
+    border-radius: 16px;
+    padding: 1.25rem 1.4rem;
+  }
+  .st-grid-item strong {
+    display: block;
+    color: var(--st-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.005em;
+  }
+  .st-grid-item span {
+    display: block;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    color: var(--st-ink-soft);
+  }
+
   /* Privacy / what it doesn't do */
   .st-privacy {
     background: var(--st-paper-dim);
@@ -354,7 +406,7 @@ use_card: false
 <section class="st-hero">
   <div class="st-hero-eyebrow">For iPhone · Free · On-device</div>
   <h1>A whole season,<br>in <em>one place.</em></h1>
-  <p>Competitions, camps, race results, expenses, podium photos, receipts. The companion the rink-side parent never had - quiet, private, and built around the rhythm of a real season.</p>
+  <p>Competitions, camps, race results and times, personal bests, podium moments, expenses, receipts. The companion the rink-side parent never had - quiet, private, and built around the rhythm of a real season.</p>
   <a class="st-cta" href="https://apps.apple.com/app/skating-tracker/id6760656201" target="_blank">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
     Download on the App Store
@@ -384,7 +436,7 @@ use_card: false
   <div class="st-feature-text">
     <span class="st-feature-eyebrow">Results</span>
     <h2>Every podium. <em>Every memory.</em></h2>
-    <p>Log every race - distance, position, conditions, what to improve. Best position and medal counts roll up automatically. The status header shows the moment that mattered most: the position, the days remaining, the medals earned.</p>
+    <p>Log every race - distance, position, finishing time, conditions, what to improve. Best position and medal counts roll up automatically. <strong>Personal Bests are detected per distance</strong> the moment you save a faster time, with a per-distance progress chart so you can see yourself getting faster across the season.</p>
     <p>Attach photos to any event - medal shots, podium moments, venue pictures. Years from now, the app remembers the 3rd-place finish, the hotel that smelled like chlorine, the day everything came together.</p>
   </div>
   <div class="st-feature-visual">
@@ -396,8 +448,8 @@ use_card: false
   <div class="st-feature-text">
     <span class="st-feature-eyebrow">Adding a race</span>
     <h2>500m. 1000m. Relay. <em>Done.</em></h2>
-    <p>Adding a race is a single screen. Distance, position, optional notes - that's it. The form remembers what's coming back next time. Edit any race later from the same screen, with a delete button right where you'd expect it.</p>
-    <p>Build the picture race-by-race over the weekend. By Sunday night the season has another data point and the app has another memory.</p>
+    <p>Adding a race is a single screen. Distance, position, finishing time, optional notes - that's it. The form remembers what's coming back next time. Edit any race later from the same screen, with a delete button right where you'd expect it.</p>
+    <p>Save a podium finish, and the app celebrates with you - <em>confetti, a "New PB!" banner if it beats your best, a little haptic flourish</em>. Build the picture race-by-race over the weekend. By Sunday night the season has another data point and the app has another memory.</p>
   </div>
   <div class="st-feature-visual">
     <img src="{{ '/static/img/skatetracker/addingrace_framed.png' | relative_url }}" alt="Add race screen">
@@ -427,11 +479,42 @@ use_card: false
   <div class="st-feature-text">
     <span class="st-feature-eyebrow">Stats</span>
     <h2>The story your <em>season tells.</em></h2>
-    <p>Podium rate, average cost per event, spending breakdown by category, season summary. Numbers a parent or coach actually wants - without ever asking you to crunch one yourself.</p>
-    <p>Export the whole thing to CSV anytime, or import a past season you've been keeping in a spreadsheet. Your data is yours, in a format that lasts decades.</p>
+    <p>Podium rate, average cost per event, spending breakdown by category. <strong>Personal Bests per distance</strong> at the top, with a tap-to-expand progress chart for any distance you've raced more than once. <strong>Monthly spend chart</strong>, <strong>most-expensive-events list</strong>, and a <strong>year-on-year comparison card</strong> that quietly tells you whether the season is costing more or less than last year.</p>
+    <p>Tap any chart bar to drill into the underlying expenses. Export the whole thing to CSV anytime, or import a past season you've been keeping in a spreadsheet. Your data is yours, in a format that lasts decades.</p>
   </div>
   <div class="st-feature-visual">
     <img src="{{ '/static/img/skatetracker/statsview_framed.png' | relative_url }}" alt="Stats screen with podium rate and spending">
+  </div>
+</section>
+
+<section class="st-grid">
+  <h2>More than a <em>tracker.</em></h2>
+  <p>The small touches that turn data entry into something you come back to.</p>
+  <div class="st-grid-list">
+    <div class="st-grid-item">
+      <strong>Gentle reminders</strong>
+      <span>Day before, morning of, and "log your results?" the evening after each event. Plus a January 1 recap of the year you just had. All local, all on-device, all optional.</span>
+    </div>
+    <div class="st-grid-item">
+      <strong>Shareable result cards</strong>
+      <span>Long-press any podium race for a styled card you can send to Instagram, WhatsApp, or anywhere else. Generated locally, never uploaded.</span>
+    </div>
+    <div class="st-grid-item">
+      <strong>Your skater's photo</strong>
+      <span>Tap the avatar in Settings to set a profile photo. Small personal touch beside the name everywhere it appears.</span>
+    </div>
+    <div class="st-grid-item">
+      <strong>Swipe to delete</strong>
+      <span>Native swipe gestures across events, races, expenses, and receipts. Long-press still works for power users.</span>
+    </div>
+    <div class="st-grid-item">
+      <strong>Photo gallery, zoomable</strong>
+      <span>Tap any photo to enter the gallery. Swipe left and right through every photo on the event. Pinch and double-tap to zoom into the details.</span>
+    </div>
+    <div class="st-grid-item">
+      <strong>iCloud Backup ready</strong>
+      <span>Everything you track travels with your iCloud Backup automatically. Switch phones, your whole season comes with you.</span>
+    </div>
   </div>
 </section>
 
