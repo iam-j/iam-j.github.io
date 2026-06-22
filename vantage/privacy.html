@@ -126,7 +126,7 @@ sitemap: false
 <header>
   <div class="brand">Vantage</div>
   <h1>Privacy <span class="accent">policy.</span></h1>
-  <div class="meta">Last updated · 10 May 2026</div>
+  <div class="meta">Last updated · 22 May 2026</div>
 </header>
 
 <section class="callout">
@@ -137,20 +137,24 @@ sitemap: false
 <p>Nothing. There is no analytics SDK, no crash reporter, no advertising framework, no remote configuration, no cloud API, and no account system. Vantage has never sent a single byte of your data to any server, including ours, because there is no server.</p>
 
 <h2>What stays on your device<span class="dot">.</span></h2>
-<p>The following is written to Vantage's app sandbox on your iPhone and only your iPhone:</p>
+<p>The following is written to Vantage's app sandbox on your iPhone:</p>
 <ul>
-  <li>Captures, thumbnails, subject masks, composites, and time-lapse exports</li>
+  <li>Captures, thumbnails, subject masks, depth maps (on LiDAR-equipped iPhones), composites, and time-lapse exports</li>
   <li>Spot names and capture timestamps</li>
   <li>Alignment data (computed by Apple's Vision framework on-device)</li>
-  <li>If you grant location permission, a single GPS coordinate per spot for sunrise / sunset times</li>
+  <li>If you grant location permission, a single GPS coordinate per spot &mdash; rounded to roughly 110m precision &mdash; used for sunrise / sunset times</li>
 </ul>
-<p>When you delete a spot or uninstall Vantage, this data is deleted with it. There is no backup or copy anywhere else.</p>
+<p>Vantage marks these files with iOS's strongest file-protection class, which means they are unreadable while the device is locked. When you delete a spot or uninstall Vantage, the data is deleted with it.</p>
+
+<h2>iCloud Backup<span class="dot">.</span></h2>
+<p>If you have iCloud Backup turned on in iOS Settings, Apple will include Vantage's sandbox as part of your encrypted device backup. We don't control this backup, can't read it, and have no access to it &mdash; it's handled entirely by Apple between your device and your iCloud account, and is encrypted end-to-end. It's the same mechanism every iOS app's data uses unless the developer opts out.</p>
+<p>If you'd prefer Vantage's data not to be included, you can exclude it under <strong>Settings &rarr; [your name] &rarr; iCloud &rarr; Manage Account Storage &rarr; Backups &rarr; This iPhone &rarr; Vantage</strong> on iOS.</p>
 
 <h2>Permissions<span class="dot">.</span></h2>
 <ul>
   <li><strong>Camera</strong> &mdash; required to take photos.</li>
-  <li><strong>Photos</strong> &mdash; only used when you tap Save on a composite or time-lapse, so the file can be added to your library.</li>
-  <li><strong>Location (When In Use)</strong> &mdash; optional. Used once per first capture to pin a spot, and to compute the day's sunrise and sunset times for the spot detail screen. The coordinate is stored locally and never transmitted.</li>
+  <li><strong>Photos (add-only)</strong> &mdash; only used when you tap Save on a composite or time-lapse, so the file can be added to your library. Vantage never reads from your Photos library.</li>
+  <li><strong>Location (When In Use)</strong> &mdash; optional. Used once per first capture to pin a spot, and to compute that day's sunrise and sunset times for the spot detail screen. The coordinate is stored locally at coarse precision and never transmitted.</li>
 </ul>
 <p>You can revoke any of these in iOS Settings &rarr; Privacy &rarr; Camera / Photos / Location Services. Vantage degrades gracefully when permissions are off.</p>
 
